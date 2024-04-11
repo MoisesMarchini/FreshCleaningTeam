@@ -1,0 +1,53 @@
+:root {
+  --border-radius: 4px;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.btn {
+  --bg-color: transparent;
+  --active-bg-color: var(--default-text-color);
+  --color: var(--default-text-color);
+  --active-color: var(--body-bg);
+
+  background-color: var(--bg-color);
+  color: var(--color);
+  border: 1px solid var(--active-bg-color);
+  border-radius: var(--border-radius);
+  transition:
+    background-color var(--default-animation-duration),
+    color var(--default-animation-duration);
+  &.active,
+  &:hover {
+    background-color: var(--active-bg-color);
+    color: var(--active-color);
+  }
+}
+
+.btn-primary {
+  border: 0;
+  --bg-color: var(--primary-light-color);
+  --active-bg-color: var(--primary-dark-color);
+  --color: var(--default-text-color);
+  --active-color: var(--body-bg);
+}
+
+.btn-outline-primary {
+  --bg-color: transparent;
+  --active-bg-color: var(--primary-dark-color);
+  --color: var(--primary-dark-color);
+  --active-color: var(--body-bg);
+}
+
+.btn.btn-square {
+  display: grid;
+  place-content: center;
+  width: 2rem;
+  height: 2rem;
+}
+
+.rounded {
+  border-radius: var(--border-radius);
+}

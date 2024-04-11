@@ -1,0 +1,45 @@
+.container {
+  --padding-x: calc(1.5rem + 4vmin);
+
+  margin: 0 auto;
+  width: 100%;
+  max-width: clamp(min(200px, 100%), 85vw, 1200px);
+  padding-left: calc(var(--_base-padding-x) * .5);
+  padding-right: calc(var(--_base-padding-x) * .5);
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+$sizes: (
+  '0'       : 0%,
+  '25'      : 25%,
+  '50'      : 50%,
+  '75'      : 75%,
+  '100'     : 100%,
+  'auto'    : auto
+);
+$axes: (
+  'x': width,
+  'y': height,
+);
+@each $axle, $axle-value in $axes {
+  @each $size-key, $size-value in $sizes {
+    .#{$axle}-#{$size-key} {
+      #{$axle-value}: #{$size-value};
+    }
+
+    @each $key, $value in $breakpoints {
+      @media (min-width: #{$value}) {
+        .#{$axle}-#{$key}-#{$size-key} {
+          #{$axle-value}: #{$size-value} !important;
+        }
+      }
+    }
+  }
+}

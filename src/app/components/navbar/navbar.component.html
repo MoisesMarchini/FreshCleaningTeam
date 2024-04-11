@@ -1,0 +1,28 @@
+<header>
+  <div class="container flex-column flex-md-row">
+    <div class="left d-flex flex-1 w-100 justify-content-space-between align-items-center h-100">
+      <div class="logo-wrapper">
+        <img src="/assets/logo/logo-square.jpg" alt="" srcset="">
+      </div>
+      <button (click)="expand = !expand" class="btn btn-primary btn-square nav-toggle d-block d-md-none">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+    <nav class="d-none d-md-block" [class.expand]="expand">
+      <ul>
+        <li>
+          <a [routerLink]="routes.home" routerLinkActive="active">Home</a>
+        </li>
+        <li>
+          <a [routerLink]="routes.aboutUs" routerLinkActive="active">About Us</a>
+        </li>
+        <li>
+          <a [routerLink]="routes.service" routerLinkActive="active">Service</a>
+        </li>
+        <li>
+          <a [routerLink]="routes.contact" routerLinkActive="active">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

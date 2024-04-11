@@ -1,0 +1,68 @@
+$flex-directions: row column;
+@each $direction in $flex-directions{
+  .flex-#{$direction} {
+    flex-direction: #{$direction};
+  }
+  @each $key, $value in $breakpoints {
+    @media (min-width: #{$value}) {
+      .flex-#{$key}-#{$direction} {
+        flex-direction: #{$direction} !important;
+      }
+    }
+  }
+}
+
+$alignments: center flex-start flex-end;
+@each $alignment in $alignments {
+  .align-items-#{$alignment} {
+    align-items: #{$alignment};
+  }
+  .align-content-#{$alignment} {
+    align-content: #{$alignment};
+  }
+  .align-self-#{$alignment} {
+    align-self: #{$alignment};
+  }
+}
+
+$justifies: center flex-start flex-end space-between;
+@each $justify in $justifies {
+  .justify-items-#{$justify} {
+    justify-items: #{$justify};
+  }
+  .justify-content-#{$justify} {
+    justify-content: #{$justify};
+  }
+  .justify-self-#{$justify} {
+    justify-self: #{$justify};
+  }
+}
+
+
+@for $i from 0 through 10 {
+  $value: $i;
+  $gap-value: $value * calc(1 / 2);
+  .gap-#{$value} {
+    gap: #{$gap-value}rem;
+  }
+  @each $key, $value in $breakpoints {
+    @media (min-width: #{$value}) {
+      .gap-#{$key}-#{$value} {
+        gap: #{$gap-value}rem;
+      }
+    }
+  }
+}
+
+@for $i from 0 through 1 {
+  $value: $i;
+  .flex-grow-#{$value} {
+    flex-grow: $value;
+  }
+  .flex-shrink-#{$value} {
+    flex-shrink: $value;
+  }
+  .flex-#{$value} {
+    flex: $value $value;
+  }
+}
