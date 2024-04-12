@@ -1,13 +1,45 @@
+$primary-dark: #4d6b30;
+$primary-light: #c3d85c;
+$primary-lightest: #ecf8dc;
+$primary-alt-dark: #77a353;
+$primary-alt-light: #a4d67c;
+$secondary-light: #5cccd8;
+$secondary-dark: #304e6b;
+$terciary-dark: #6b3030;
+$terciary-light: #d85c5c;
+$content-bg-alt: #ede6db;
+$white: #fff;
+$body-bg: #fff;
+$default-text-color: #222;
+$text-muted: #666;
+$border-color: #ccc;
+
+$colors: (
+  "primary-dark": $primary-dark,
+  "primary-light": $primary-light,
+  "primary-lightest": $primary-lightest,
+  "primary-alt-dark": $primary-alt-dark,
+  "primary-alt-light": $primary-alt-light,
+  "secondary-light": $secondary-light,
+  "secondary-dark": $secondary-dark,
+  "terciary-dark": $terciary-dark,
+  "terciary-light": $terciary-light,
+  "content-bg-alt": $content-bg-alt,
+  "white": $white,
+  "body-bg": $body-bg,
+  "default-text-color": $default-text-color,
+  "muted": $text-muted,
+  "border-color": $border-color,
+);
+
 :root {
-  --primary-dark-color: #647c4a;
-  --primary-light-color: #cbdd71;
-  --primary-lightest-color: #ecf8dc;
-  --body-bg: #fff;
-  --default-text-color: #222;
-  --text-muted: #666;
-  --border-color: #ccc;
+  @each $color-key, $color-value in $colors {
+    --#{$color-key}: #{$color-value};
+  }
 }
 
-.text-muted {
-  color: var(--text-muted);
+@each $color-key, $color-value in $colors {
+  .text-#{$color-key} {
+    color: var(--#{$color-key}) !important;
+  }
 }

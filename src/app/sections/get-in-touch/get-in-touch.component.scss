@@ -1,5 +1,12 @@
 section {
-  height: 40vh;
-  background-color: var(--primary-dark-color);
-  margin: 0 -3rem;
+  background-color: var(--primary-lightest);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin: 0;
+  max-width: unset;
+  background-color: var(--content-bg-alt);
+}
+
+.container {
+  max-width: 660px;
 }

@@ -1,11 +1,21 @@
 <div
-  class="layout d-lg-grid gap-3 grid-lg-cols-2"
+  [class]="
+    'layout d-lg-grid gap-3 ' +
+    (options?.customRootClass ?? '') +
+    ' ' +
+    (options?.disableGridCols ? ' ' : ' grid-lg-cols-2')
+  "
   [class.reverse-on-mobile]="reverseOnMobile"
 >
   <ng-content select=".custom-left-content"></ng-content>
   <div class="body-content py-2 px-5 my-auto">
-    <h3 class="mb-2 section-title">{{ title }}</h3>
-    <p *ngFor="let item of content" class="section-content">
+    <h3 [class]="'mb-2 section-title ' + (options?.customTitleClass ?? '')">
+      {{ title }}
+    </h3>
+    <p
+      *ngFor="let item of content"
+      [class]="'section-content ' + (options?.customContentClass ?? '')"
+    >
       {{ item }}
     </p>
   </div>

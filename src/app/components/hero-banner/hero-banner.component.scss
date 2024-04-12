@@ -1,37 +1,45 @@
 @import "../../styles/breakpoints";
 
 .hero-wrapper {
-  --_hero-bg-color: var(--primary-lightest-color);
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
+  --_hero-bg-color: #fdefde; //var(--content-bg-alt);
+  --_hero-h1-small-color: #e54854; //var(--terciary-light);
+  --_hero-h1-decorate-color: #222; //var(--primary-dark);
+  --_hero-p-color: #a6644c;
   position: relative;
+  overflow: hidden;
+  margin-top: calc(-1 * var(--nav-total-height));
+  background-color: var(--_hero-bg-color);
   &::before {
-    content: "";
+    // content: "";
     position: absolute;
-    width: 55vmax;
-    height: 55vmax;
-    background-color: var(--_hero-bg-color);
-    bottom: 2rem;
-    left: 0;
-    transform: translate(-50%, 50%) rotate(45deg);
-    // background: linear-gradient(
-    //   to bottom,
-    //   var(--body-bg),
-    //   var(--_hero-bg-color)
-    // );
+
+    // width: 55vmax;
+    // height: 55vmax;
+    // background-color: var(--_hero-bg-color);
+    // bottom: 2rem;
+    // left: 0;
+    // transform: translate(-50%, 50%) rotate(45deg);
+
+    inset: 0;
+    top: calc(-1 * var(--nav-total-height));
+    background: linear-gradient(
+      to top,
+      var(--body-bg),
+      var(--_hero-bg-color) 50%
+    );
   }
 }
 
 .hero {
+  overflow: hidden;
   position: relative;
   z-index: 1;
-  max-height: calc(100svh - var(--nav-total-height));
+  height: 100vh;
+  height: 100dvh;
   place-content: center;
   display: grid;
   @include breakpoint-md {
     grid-template-columns: 30% 1fr;
-    height: calc(100svh - var(--nav-total-height));
   }
 }
 
@@ -43,18 +51,23 @@
     padding: 5rem 2rem;
     padding-top: 0;
   }
+  .hero-btns > .btn {
+    // --active-bg-color: var(--primary-alt-dark);
+    // --bg-color: var(--primary-alt-light);
+    --color: white;
+    --active-color: white;
+  }
   .hero-title {
-    color: #d45985;
-    font-weight: 700;
     line-height: 1.1;
     text-transform: uppercase;
     > .small {
-      font-size: 0.6em;
+      color: var(--_hero-h1-small-color);
+      font-size: 0.5em;
     }
     > .decorate {
-      font-size: 1.25em;
-      color: #a4d67c;
       font-weight: 900;
+      font-size: 1.25em;
+      color: var(--_hero-h1-decorate-color);
       text-wrap: nowrap;
       white-space: nowrap;
     }
@@ -64,6 +77,7 @@
   }
   .hero-description {
     font-weight: 500;
+    color: var(--_hero-p-color);
   }
 }
 
@@ -71,4 +85,9 @@
   overflow: hidden;
   display: flex;
   place-content: center;
+
+  @include breakpoint-md {
+    padding: var(--nav-height);
+    padding-right: 0;
+  }
 }

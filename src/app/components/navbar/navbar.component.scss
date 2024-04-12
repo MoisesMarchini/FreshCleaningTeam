@@ -1,6 +1,6 @@
 header {
   padding: var(--nav-pad-y) 0;
-  background-color: var(--body-bg);
+  background-color: transparent; //var(--body-bg);
   position: relative;
   z-index: 100;
 }
@@ -27,7 +27,7 @@ nav > ul {
 nav > ul > li > a {
   position: relative;
   display: grid;
-  color: var(--primary-dark-color);
+  color: var(--primary-dark);
   padding: 0.5rem 1rem;
   font-weight: 500;
   transition: opacity var(--default-animation-duration);
@@ -44,7 +44,7 @@ nav > ul > li > a {
     bottom: -2px;
     width: 0px;
     height: 2px;
-    background-color: var(--primary-dark-color);
+    background-color: var(--primary-dark);
     left: 50%;
     transform: translateX(-50%);
   }

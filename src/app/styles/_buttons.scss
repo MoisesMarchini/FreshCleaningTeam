@@ -32,16 +32,16 @@ button,
 
 .btn-primary {
   border: 0;
-  --bg-color: var(--primary-light-color);
-  --active-bg-color: var(--primary-dark-color);
+  --bg-color: var(--primary-light);
+  --active-bg-color: var(--primary-dark);
   --color: var(--default-text-color);
   --active-color: var(--body-bg);
 }
 
 .btn-outline-primary {
   --bg-color: transparent;
-  --active-bg-color: var(--primary-dark-color);
-  --color: var(--primary-dark-color);
+  --active-bg-color: var(--primary-dark);
+  --color: var(--primary-dark);
   --active-color: var(--body-bg);
 }
 
