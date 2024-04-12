@@ -5,4 +5,5 @@ export class PageSection {
   customTitleClass?: string;
   customContentClass?: string;
   disableGridCols?: boolean;
+  disablePaddingX?: boolean;
 }

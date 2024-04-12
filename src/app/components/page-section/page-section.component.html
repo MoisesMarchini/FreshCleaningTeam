@@ -8,7 +8,10 @@
   [class.reverse-on-mobile]="reverseOnMobile"
 >
   <ng-content select=".custom-left-content"></ng-content>
-  <div class="body-content py-2 px-5 my-auto">
+  <div
+    class="body-content py-2 my-auto"
+    [class.px-5]="!options?.disablePaddingX"
+  >
     <h3 [class]="'mb-2 section-title ' + (options?.customTitleClass ?? '')">
       {{ title }}
     </h3>
