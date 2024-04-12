@@ -8,4 +8,5 @@ import { environment } from 'src/environments/environment';
 })
 export class FooterComponent {
   socialMediaLinks = environment.socialMediaLinks;
+  routes = environment.routes;
 }

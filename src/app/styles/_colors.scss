@@ -4,10 +4,10 @@
   --primary-lightest-color: #ecf8dc;
   --body-bg: #fff;
   --default-text-color: #222;
-  --text-muted-color: #666;
+  --text-muted: #666;
+  --border-color: #ccc;
 }
 
 .text-muted {
-  color: var(--text-muted-color);
+  color: var(--text-muted);
 }
-

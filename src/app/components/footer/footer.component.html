@@ -1,12 +1,6 @@
-<footer>
-  <div
-    class="row bg-external-bg"
-    style="padding-top: 24px; padding-bottom: 24px"
-  >
-    <div
-      class="container d-flex flex-column fw-600 fs-14 gap-3"
-      style="flex-wrap: wrap"
-    >
+<footer class="mt-8">
+  <div class="container">
+    <div class="d-flex flex-column fw-600 fs-14 gap-3" style="flex-wrap: wrap">
       <ul
         class="social-media-list d-flex gap-2 align-items-center fs-28 text-primary"
       >
@@ -14,7 +8,7 @@
           <a
             [href]="socialMediaLinks['Facebook']"
             target="_blank"
-            class="social-media-link btn btn-outline-primary "
+            class="social-media-link btn btn-outline-primary"
           >
             <i class="fa-brands fa-facebook-f"></i>
           </a>
@@ -23,22 +17,34 @@
           <a
             [href]="socialMediaLinks['Instagram']"
             target="_blank"
-            class="social-media-link btn btn-outline-primary "
+            class="social-media-link btn btn-outline-primary"
           >
             <i class="fa-brands fa-instagram"></i>
           </a>
         </li>
       </ul>
-      <p style="line-height: 1.6">
-        © 2024 All Rights Reserved
-        <br />
-        Site desenvolvido por
-        <a
-          href="https://moisesmarchini.vercel.app"
-          target="_blank"
-          >Moisés Marchini</a
-        >
-      </p>
+      <div class="d-flex gap-2">
+        <a [routerLink]="routes.termsOfUse">Terms of Use</a>
+        <a [routerLink]="routes.privacyPolicy">Privacy Policy</a>
+      </div>
+      <div
+        class="d-flex flex-column flex-md-row gap-2 justify-content-space-between"
+        style="line-height: 1.6; white-space: nowrap"
+      >
+        <p class="flex-grow-1">
+          <b>Email:</b> freshcleaningteam@gmail.com
+          <br />
+          <b>Phone:</b> +1 (732) 799-0341
+        </p>
+        <p class="flex-grow-1 flex-shrink-0 text-md-end">
+          © 2024 All Rights Reserved
+          <br />
+          Site desenvolvido por
+          <a href="https://moisesmarchini.vercel.app" target="_blank"
+            >Moisés Marchini</a
+          >
+        </p>
+      </div>
     </div>
   </div>
 </footer>

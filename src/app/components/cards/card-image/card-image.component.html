@@ -1,0 +1,12 @@
+<div *ngIf="options" [class]="'card'">
+  <div class="img-wrapper">
+    <img [src]="options.imagePath" alt="" srcset="" />
+  </div>
+  <div class="content">
+    <h5 class="title">{{ options.title }}</h5>
+    <p class="body">{{ options.content }}</p>
+    <a type="button" class="btn btn-outline-primary active me-auto px-2 py-1">
+      Contact Us!
+    </a>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div *ngIf="options" [class]="'card d-flex ' + getFlexClasses()">
+  <div class="icon-wrapper">
+    <i [class]="options.fontawesomeIconClass"></i>
+  </div>
+  <div class="content">
+    <h5 class="title">{{ options.title }}</h5>
+    <p class="body">{{ options.content }}</p>
+  </div>
+</div>

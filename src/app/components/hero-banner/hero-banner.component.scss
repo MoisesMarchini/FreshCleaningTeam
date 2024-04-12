@@ -1,0 +1,70 @@
+@import "../../styles/breakpoints";
+
+.hero-wrapper {
+  --_hero-bg-color: var(--primary-lightest-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      var(--body-bg),
+      var(--_hero-bg-color)
+    );
+    z-index: -1;
+  }
+}
+
+.hero {
+  max-height: calc(100svh - var(--nav-total-height));
+  place-content: center;
+  display: grid;
+  @include breakpoint-md {
+    grid-template-columns: 30% 1fr;
+    height: calc(100svh - var(--nav-total-height));
+  }
+}
+
+.hero-body {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 0;
+  margin: auto;
+  @include breakpoint-sd-only {
+    order: 1;
+    padding: 5rem 2rem;
+    padding-top: 0;
+  }
+  .hero-title {
+    color: #d45985;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    > .small {
+      font-size: 0.6em;
+    }
+    > .decorate {
+      font-size: 1.25em;
+      color: #a4d67c;
+      font-weight: 900;
+      text-wrap: nowrap;
+      white-space: nowrap;
+    }
+    @include breakpoint-sd-only {
+      font-size: 2.5rem;
+    }
+  }
+  .hero-description {
+    font-weight: 500;
+  }
+}
+
+.hero-img-wrapper {
+  overflow: hidden;
+  display: flex;
+  place-content: center;
+}

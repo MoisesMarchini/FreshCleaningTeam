@@ -18,6 +18,7 @@ export class RouteHeaderComponent {
   constructor(private router: Router) {
     router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
+        this.headerTitle = undefined;
         this.currentUrl = e.url.split('/')[1];
         this.headerTitle = this.refreshTitle();
       }
@@ -34,6 +35,10 @@ export class RouteHeaderComponent {
         return environment.routeHeaders.service;
       case environment.routes.contact:
         return environment.routeHeaders.contact;
+      case environment.routes.termsOfUse:
+        return environment.routeHeaders.termsOfUse;
+      case environment.routes.privacyPolicy:
+        return environment.routeHeaders.privacyPolicy;
       default:
         return environment.routeHeaders.home;
     }

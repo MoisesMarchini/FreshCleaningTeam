@@ -1,0 +1,48 @@
+$paddings: (
+  "s": "padding-left",
+  "e": "padding-right",
+  "t": "padding-top",
+  "b": "padding-bottom",
+);
+@for $i from 0 through 10 {
+  $value: $i;
+  $padding-value: $value * calc(1 / 2);
+  .p-#{$value} {
+    padding: #{$padding-value}rem;
+  }
+  .px-#{$value} {
+    padding-right: #{$padding-value}rem;
+    padding-left: #{$padding-value}rem;
+  }
+  .py-#{$value} {
+    padding-top: #{$padding-value}rem;
+    padding-bottom: #{$padding-value}rem;
+  }
+  @each $pad-key, $pad-name in $paddings {
+    .p#{$pad-key}-#{$value} {
+      #{$pad-name}: #{$padding-value}rem;
+    }
+    @each $key, $value2 in $breakpoints {
+      @media (min-width: #{$value2}) {
+        .p#{$pad-key}-#{$key}-#{$value} {
+          #{$pad-name}: #{$padding-value}rem;
+        }
+      }
+    }
+  }
+  @each $key, $value2 in $breakpoints {
+    @media (min-width: #{$value2}) {
+      .p-#{$key}-#{$value} {
+        padding: #{$padding-value}rem;
+      }
+      .px-#{$key}-#{$value} {
+        padding-right: #{$padding-value}rem;
+        padding-left: #{$padding-value}rem;
+      }
+      .py-#{$key}-#{$value} {
+        padding-top: #{$padding-value}rem;
+        padding-bottom: #{$padding-value}rem;
+      }
+    }
+  }
+}

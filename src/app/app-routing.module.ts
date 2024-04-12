@@ -5,6 +5,8 @@ import { environment } from 'src/environments/environment';
 import { AboutUsPage } from './pages/about-us/about-us.component';
 import { ServicePage } from './pages/service/service.component';
 import { ContactPage } from './pages/contact/contact.component';
+import { TermsOfUsePage } from './pages/terms-of-use/terms-of-use.component';
+import { PrivacyPolicyPage } from './pages/privacy-policy/privacy-policy.component';
 
 const routes: Routes = [
   {
@@ -22,6 +24,14 @@ const routes: Routes = [
   {
     path: environment.routes.contact,
     component: ContactPage
+  },
+  {
+    path: environment.routes.termsOfUse,
+    component: TermsOfUsePage
+  },
+  {
+    path: environment.routes.privacyPolicy,
+    component: PrivacyPolicyPage
   },
 ];
 

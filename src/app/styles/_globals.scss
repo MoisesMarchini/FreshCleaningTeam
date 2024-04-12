@@ -1,0 +1,7 @@
+:root {
+  --default-animation-duration: 300ms;
+  --nav-height: clamp(60px, 10vw, 80px);
+  --nav-pad-y: 8px;
+  --nav-total-height: calc(var(--nav-height) + (var(--nav-pad-y) * 2));
+  --border-radius: 0px;
+}

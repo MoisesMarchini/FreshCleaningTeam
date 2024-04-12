@@ -4,6 +4,9 @@ import { HomePage } from './home/home.component';
 import { ServicePage } from './service/service.component';
 import { AboutUsPage } from './about-us/about-us.component';
 import { ContactPage } from './contact/contact.component';
+import { TermsOfUsePage } from './terms-of-use/terms-of-use.component';
+import { PrivacyPolicyPage } from './privacy-policy/privacy-policy.component';
+import { ComponentsModule } from '../components/components.module';
 
 
 
@@ -12,10 +15,13 @@ import { ContactPage } from './contact/contact.component';
     HomePage,
     ServicePage,
     AboutUsPage,
-    ContactPage
+    ContactPage,
+    TermsOfUsePage,
+    PrivacyPolicyPage
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ComponentsModule
   ]
 })
 export class PagesModule { }

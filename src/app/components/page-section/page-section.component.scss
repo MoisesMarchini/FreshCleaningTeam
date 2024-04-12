@@ -1,0 +1,14 @@
+section > .layout {
+  margin: 5rem 0;
+  place-content: center;
+}
+
+.section-title {
+  color: var(--primary-dark-color);
+  font-size: 1.75rem;
+}
+
+.layout.reverse-on-mobile {
+  display: flex;
+  flex-direction: column-reverse;
+}

@@ -1,5 +1,10 @@
-$flex-directions: row column;
-@each $direction in $flex-directions{
+.place-content-center {
+  display: grid;
+  place-content: center;
+}
+
+$flex-directions: row column column-reverse row-reverse;
+@each $direction in $flex-directions {
   .flex-#{$direction} {
     flex-direction: #{$direction};
   }
@@ -12,7 +17,21 @@ $flex-directions: row column;
   }
 }
 
-$alignments: center flex-start flex-end;
+$flex-wraps: wrap nowrap;
+@each $wrapper in $flex-wraps {
+  .flex-#{$wrapper} {
+    flex-wrap: #{$wrapper};
+  }
+  @each $key, $value in $breakpoints {
+    @media (min-width: #{$value}) {
+      .flex-#{$key}-#{$wrapper} {
+        flex-wrap: #{$wrapper} !important;
+      }
+    }
+  }
+}
+
+$alignments: center flex-start flex-end baseline;
 @each $alignment in $alignments {
   .align-items-#{$alignment} {
     align-items: #{$alignment};
@@ -38,17 +57,17 @@ $justifies: center flex-start flex-end space-between;
   }
 }
 
-
 @for $i from 0 through 10 {
   $value: $i;
-  $gap-value: $value * calc(1 / 2);
+  $gap-value: $value * 0.5;
   .gap-#{$value} {
     gap: #{$gap-value}rem;
   }
-  @each $key, $value in $breakpoints {
-    @media (min-width: #{$value}) {
+
+  @each $key, $value2 in $breakpoints {
+    @media (min-width: #{$value2}) {
       .gap-#{$key}-#{$value} {
-        gap: #{$gap-value}rem;
+        gap: #{$gap-value}rem !important;
       }
     }
   }
@@ -64,5 +83,19 @@ $justifies: center flex-start flex-end space-between;
   }
   .flex-#{$value} {
     flex: $value $value;
+  }
+}
+
+$displays: none flex block grid inline;
+@each $display in $displays {
+  .d-#{$display} {
+    display: #{$display};
+  }
+  @each $key, $value in $breakpoints {
+    @media (min-width: #{$value}) {
+      .d-#{$key}-#{$display} {
+        display: #{$display} !important;
+      }
+    }
   }
 }
