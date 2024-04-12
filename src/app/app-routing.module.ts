@@ -11,32 +11,36 @@ import { PrivacyPolicyPage } from './pages/privacy-policy/privacy-policy.compone
 const routes: Routes = [
   {
     path: environment.routes.home,
-    component: HomePage
+    component: HomePage,
   },
   {
     path: environment.routes.aboutUs,
-    component: AboutUsPage
+    component: AboutUsPage,
   },
   {
     path: environment.routes.service,
-    component: ServicePage
+    component: ServicePage,
   },
   {
     path: environment.routes.contact,
-    component: ContactPage
+    component: ContactPage,
   },
   {
     path: environment.routes.termsOfUse,
-    component: TermsOfUsePage
+    component: TermsOfUsePage,
   },
   {
     path: environment.routes.privacyPolicy,
-    component: PrivacyPolicyPage
+    component: PrivacyPolicyPage,
+  },
+  {
+    path: '**',
+    redirectTo: environment.routes.home,
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

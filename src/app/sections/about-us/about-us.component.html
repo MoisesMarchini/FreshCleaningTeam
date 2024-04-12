@@ -1,0 +1,24 @@
+<section class="d-grid">
+  <app-page-section [options]="sections['cleaningProcess']">
+    <div class="custom-left-content">
+      <img src="/assets/svgs/cleaning-process.svg" alt="" srcset="" />
+    </div>
+  </app-page-section>
+  <app-page-section
+    [options]="sections['cleaningServices']"
+    [reverseOnMobile]="true"
+  >
+    <div class="custom-right-content">
+      <img
+        src="/assets/svgs/specialized-cleaning-services.svg"
+        alt=""
+        srcset=""
+      />
+    </div>
+  </app-page-section>
+  <app-page-section [options]="sections['environmentFriendly']">
+    <div class="custom-left-content">
+      <img src="/assets/svgs/environment-friendly.svg" alt="" srcset="" />
+    </div>
+  </app-page-section>
+</section>

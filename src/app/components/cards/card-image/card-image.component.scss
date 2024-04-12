@@ -1,37 +1,41 @@
+@import "../../../styles/breakpoints";
+
 :host {
   --_image-height: 160px;
   --_image-height-offset: 10px;
   --_text-color: var(--primary-dark-color);
   --_end-bg-color: var(--body-bg);
-  transition: opacity var(--default-animation-duration),
-    filter var(--default-animation-duration),
-    box-shadow var(--default-animation-duration),
-    transform var(--default-animation-duration);
-  &.inactive {
-    opacity: 0.5;
-    filter: saturate(0);
-    transform: scale(0.98);
-  }
-  &.active,
-  &:hover {
-    box-shadow: 0px 0px 10px -5px var(--primary-dark-color);
-    transform: scale(1);
-    opacity: 1;
-    filter: saturate(1);
+  @include breakpoint-md {
+    &.inactive .card {
+      opacity: 0.5;
+      filter: saturate(0);
+      transform: scale(0.98);
+    }
+    &.active .card,
+    &:hover .card {
+      box-shadow: 0px 0px 10px -1px var(--primary-dark-color);
+      transform: scale(1);
+      opacity: 1;
+      filter: saturate(1);
+    }
   }
 }
 
 .card {
-  border: 2px solid var(--primary-dark-color);
-  border-radius: var(--border-radius);
   display: grid;
   min-height: 100%;
   position: relative;
+  transition: opacity var(--default-animation-duration),
+    filter var(--default-animation-duration),
+    box-shadow var(--default-animation-duration),
+    transform var(--default-animation-duration);
+  border-radius: var(--border-radius);
+  border: 4px solid var(--body-bg);
 }
 
 .img-wrapper {
   position: absolute;
-  inset: 4px;
+  inset: 0;
   border-radius: inherit;
   overflow: hidden;
   &::before {
@@ -43,6 +47,9 @@
     );
     position: absolute;
     inset: 0;
+  }
+  img {
+    overflow: hidden;
   }
 }
 

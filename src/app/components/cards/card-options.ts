@@ -1,6 +1,7 @@
 export class CardOptions {
   title: string = '';
   content: string = '';
+  hideBorder?: boolean = false;
 }
 
 export class CardIconOptions extends CardOptions {

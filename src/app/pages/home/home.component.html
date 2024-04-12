@@ -1,20 +1,10 @@
 <app-hero-banner></app-hero-banner>
 
 <div class="container">
-  <div class="d-grid gap-3">
-    <div class="d-grid gap-3">
-      <app-page-section [options]="sections.getInTouch">
-        <div class="custom-left-content">
-          <app-carousel [imgPaths]="getVerticalImages()"></app-carousel>
-        </div>
-      </app-page-section>
-    </div>
-
-    <div class="d-grid grid-lg-cols-3 gap-3 gap-lg-1">
-      <app-card-image
-        *ngFor="let card of cardImages"
-        [options]="card"
-      ></app-card-image>
-    </div>
+  <div class="d-grid gap-10 my-3">
+    <app-about-us></app-about-us>
+    <app-our-services></app-our-services>
+    <app-service-portfolio></app-service-portfolio>
+    <app-get-in-touch></app-get-in-touch>
   </div>
 </div>

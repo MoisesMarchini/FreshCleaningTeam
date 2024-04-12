@@ -9,17 +9,23 @@
   &::before {
     content: "";
     position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to bottom,
-      var(--body-bg),
-      var(--_hero-bg-color)
-    );
-    z-index: -1;
+    width: 55vmax;
+    height: 55vmax;
+    background-color: var(--_hero-bg-color);
+    bottom: 2rem;
+    left: 0;
+    transform: translate(-50%, 50%) rotate(45deg);
+    // background: linear-gradient(
+    //   to bottom,
+    //   var(--body-bg),
+    //   var(--_hero-bg-color)
+    // );
   }
 }
 
 .hero {
+  position: relative;
+  z-index: 1;
   max-height: calc(100svh - var(--nav-total-height));
   place-content: center;
   display: grid;
@@ -30,8 +36,6 @@
 }
 
 .hero-body {
-  position: relative;
-  z-index: 1;
   padding: 2rem 0;
   margin: auto;
   @include breakpoint-sd-only {

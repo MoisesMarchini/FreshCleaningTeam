@@ -7,8 +7,7 @@ import { ContactPage } from './contact/contact.component';
 import { TermsOfUsePage } from './terms-of-use/terms-of-use.component';
 import { PrivacyPolicyPage } from './privacy-policy/privacy-policy.component';
 import { ComponentsModule } from '../components/components.module';
-
-
+import { SectionsModule } from '../sections/sections.module';
 
 @NgModule({
   declarations: [
@@ -17,11 +16,8 @@ import { ComponentsModule } from '../components/components.module';
     AboutUsPage,
     ContactPage,
     TermsOfUsePage,
-    PrivacyPolicyPage
+    PrivacyPolicyPage,
   ],
-  imports: [
-    CommonModule,
-    ComponentsModule
-  ]
+  imports: [CommonModule, ComponentsModule, SectionsModule],
 })
-export class PagesModule { }
+export class PagesModule {}
