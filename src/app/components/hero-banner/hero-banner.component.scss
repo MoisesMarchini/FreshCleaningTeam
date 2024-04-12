@@ -1,10 +1,10 @@
 @import "../../styles/breakpoints";
 
 .hero-wrapper {
-  --_hero-bg-color: #fdefde; //var(--content-bg-alt);
-  --_hero-h1-small-color: #e54854; //var(--terciary-light);
-  --_hero-h1-decorate-color: #222; //var(--primary-dark);
-  --_hero-p-color: #a6644c;
+  --_hero-bg-color: var(--primary-lightest);
+  --_hero-h1-small-color: var(--primary-light);
+  --_hero-h1-decorate-color: ; //var(--primary-dark);
+  --_hero-p-color: var(--muted);
   position: relative;
   overflow: hidden;
   margin-top: calc(-1 * var(--nav-total-height));
@@ -35,7 +35,7 @@
   position: relative;
   z-index: 1;
   height: 100vh;
-  height: 100dvh;
+  height: 100svh;
   place-content: center;
   display: grid;
   @include breakpoint-md {
@@ -48,7 +48,7 @@
   margin: auto;
   @include breakpoint-sd-only {
     order: 1;
-    padding: 5rem 2rem;
+    padding: 0rem 2rem;
     padding-top: 0;
   }
   .hero-btns > .btn {
@@ -58,14 +58,15 @@
     --active-color: white;
   }
   .hero-title {
-    line-height: 1.1;
+    line-height: 1;
     text-transform: uppercase;
+    font-weight: 900;
     > .small {
       color: var(--_hero-h1-small-color);
       font-size: 0.5em;
+      margin: 0;
     }
     > .decorate {
-      font-weight: 900;
       font-size: 1.25em;
       color: var(--_hero-h1-decorate-color);
       text-wrap: nowrap;
