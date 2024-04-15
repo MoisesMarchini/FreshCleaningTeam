@@ -1,16 +1,23 @@
 @import "../../styles/breakpoints";
 
 .hero-wrapper {
-  --_hero-bg-color: var(--primary-lightest);
+  --_hero-bg-color: var(--body-bg);
   --_hero-h1-small-color: var(--primary-light);
   --_hero-h1-decorate-color: ; //var(--primary-dark);
   --_hero-p-color: var(--muted);
+  --_height: 100svh;
+  --_max-height: calc(100vh - var(--nav-total-height));
+  --_top: ; //calc(-1 * var(--nav-total-height));
+
   position: relative;
   overflow: hidden;
-  margin-top: calc(-1 * var(--nav-total-height));
+  margin-top: var(--_top);
   background-color: var(--_hero-bg-color);
+  max-height: var(--_max-height);
+  display: grid;
+  place-content: center;
   &::before {
-    // content: "";
+    content: "";
     position: absolute;
 
     // width: 55vmax;
@@ -21,74 +28,16 @@
     // transform: translate(-50%, 50%) rotate(45deg);
 
     inset: 0;
-    top: calc(-1 * var(--nav-total-height));
     background: linear-gradient(
-      to top,
+      to bottom,
       var(--body-bg),
-      var(--_hero-bg-color) 50%
+      transparent var(--nav-total-height)
     );
   }
-}
-
-.hero {
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  height: 100vh;
-  height: 100svh;
-  place-content: center;
-  display: grid;
-  @include breakpoint-md {
-    grid-template-columns: 30% 1fr;
-  }
-}
-
-.hero-body {
-  padding: 2rem 0;
-  margin: auto;
-  @include breakpoint-sd-only {
-    order: 1;
-    padding: 0rem 2rem;
-    padding-top: 0;
-  }
-  .hero-btns > .btn {
-    // --active-bg-color: var(--primary-alt-dark);
-    // --bg-color: var(--primary-alt-light);
-    --color: white;
-    --active-color: white;
-  }
-  .hero-title {
-    line-height: 1;
-    text-transform: uppercase;
-    font-weight: 900;
-    > .small {
-      color: var(--_hero-h1-small-color);
-      font-size: 0.5em;
-      margin: 0;
-    }
-    > .decorate {
-      font-size: 1.25em;
-      color: var(--_hero-h1-decorate-color);
-      text-wrap: nowrap;
-      white-space: nowrap;
-    }
-    @include breakpoint-sd-only {
-      font-size: 2.5rem;
-    }
-  }
-  .hero-description {
-    font-weight: 500;
-    color: var(--_hero-p-color);
-  }
-}
-
-.hero-img-wrapper {
-  overflow: hidden;
-  display: flex;
-  place-content: center;
-
-  @include breakpoint-md {
-    padding: var(--nav-height);
-    padding-right: 0;
+  .hero-video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 900px;
   }
 }

@@ -1,29 +1,26 @@
 <header>
   <div class="container">
-    <div class="logo-wrapper place-content-center">
-      <a [routerLink]="routes.home">
-        <img src="/assets/logo/logo-transparent.png" alt="" srcset="" />
-      </a>
+    <div class="row">
+      <div class="logo-wrapper place-content-center">
+        <a [routerLink]="routes.home">
+          <img src="/assets/logo/logo-transparent.png" alt="" srcset="" />
+        </a>
+      </div>
+      <button type="button" class="btn btn-primary btn-pill">
+        Request an Estimate
+      </button>
     </div>
-    <nav>
-      <ul>
-        <!-- <li>
-          <a [routerLink]="routes.home" routerLinkActive="active">Home</a>
-        </li> -->
-        <!-- <li>
-            <a [routerLink]="routes.aboutUs" routerLinkActive="active"
-              >About Us</a
-            >
-          </li> -->
-        <!-- <li>
-          <a [routerLink]="routes.service" routerLinkActive="active">Service</a>
-        </li> -->
-        <li>
-          <a [routerLink]="routes.contact" routerLinkActive="active"
-            >Contact Us</a
-          >
-        </li>
-      </ul>
-    </nav>
   </div>
 </header>
+<nav class="container align-items-center justify-content-center py-1">
+  <ul>
+    <ng-container *ngFor="let navLink of navLinks; let i = index">
+      <li>
+        <a [routerLink]="navLink.route" routerLinkActive="active">{{
+          navLink.title
+        }}</a>
+      </li>
+      <span class="divider" *ngIf="i < navLinks.length - 1"></span>
+    </ng-container>
+  </ul>
+</nav>

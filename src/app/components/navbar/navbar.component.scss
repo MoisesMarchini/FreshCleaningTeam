@@ -1,3 +1,5 @@
+@import "../../styles/breakpoints";
+
 header {
   padding: var(--nav-pad-y) 0;
   background-color: transparent; //var(--body-bg);
@@ -5,34 +7,67 @@ header {
   z-index: 100;
 }
 
-.container {
+header > .container {
   height: var(--nav-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 1rem;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .logo-wrapper {
-  height: inherit;
+  max-height: var(--nav-height);
   width: clamp(120px, 20vw, 150px);
   overflow: hidden;
   padding: 8px 0;
 }
 
+.btn {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+nav {
+  display: none;
+  @include breakpoint-lg {
+    display: flex;
+  }
+}
+
 nav > ul {
+  --_link-color: var(--primary-dark);
   display: flex;
-  gap: 1rem;
+  gap: 0.25rem;
+  align-items: center;
+  flex-wrap: nowrap;
+  // overflow-x: auto;
+}
+
+nav > ul > .divider {
+  width: 6px;
+  height: 1px;
+  display: block;
+  background-color: var(--_link-color);
 }
 
 nav > ul > li > a {
   position: relative;
   display: grid;
-  color: var(--primary-dark);
-  padding: 0.5rem 1rem;
-  font-weight: 500;
+  color: var(--_link-color);
+  padding: 0.25rem 0.5rem;
   transition: opacity var(--default-animation-duration);
   &.active,
   &:hover {
+    --_link-color: var(--primary-dark);
     &::before {
       width: 100%;
     }
@@ -44,7 +79,7 @@ nav > ul > li > a {
     bottom: -2px;
     width: 0px;
     height: 2px;
-    background-color: var(--primary-dark);
+    background-color: var(--_link-color);
     left: 50%;
     transform: translateX(-50%);
   }

@@ -8,6 +8,7 @@ import { HeroBannerComponent } from './hero-banner/hero-banner.component';
 import { PageSectionComponent } from './page-section/page-section.component';
 import { CardsModule } from './cards/cards.module';
 import { CarouselComponent } from './carousel/carousel.component';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CarouselComponent } from './carousel/carousel.component';
     HeroBannerComponent,
     PageSectionComponent,
     CarouselComponent,
+    SliderComponent,
   ],
   imports: [CardsModule, CommonModule, RouterModule],
   exports: [
@@ -27,6 +29,7 @@ import { CarouselComponent } from './carousel/carousel.component';
     HeroBannerComponent,
     PageSectionComponent,
     CarouselComponent,
+    SliderComponent,
   ],
 })
 export class ComponentsModule {}

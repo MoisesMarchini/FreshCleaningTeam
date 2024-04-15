@@ -1,3 +1,117 @@
+$btns: (
+  "primary": (
+    "bg-color": $primary-light,
+    "active-bg-color": $primary-dark,
+    "border-color": $primary-light,
+    "active-border-color": $primary-dark,
+    "color": $white,
+    "active-color": $white,
+  ),
+  "outline-primary": (
+    "bg-color": transparent,
+    "active-bg-color": $primary-dark,
+    "border-color": $primary-dark,
+    "active-border-color": $primary-dark,
+    "color": $primary-dark,
+    "active-color": $white,
+  ),
+  "primary-light": (
+    "bg-color": $primary-lightest,
+    "active-bg-color": $primary-light,
+    "border-color": $primary-lightest,
+    "active-border-color": $primary-light,
+    "color": $dark,
+    "active-color": $dark,
+  ),
+  "outline-primary-light": (
+    "bg-color": transparent,
+    "active-bg-color": $primary-light,
+    "border-color": $primary-light,
+    "active-border-color": $primary-light,
+    "color": $primary-light,
+    "active-color": $white,
+  ),
+  "primary-alt": (
+    "bg-color": $primary-alt-light,
+    "active-bg-color": $primary-alt-dark,
+    "border-color": $primary-alt-light,
+    "active-border-color": $primary-alt-dark,
+    "color": $dark,
+    "active-color": $dark,
+  ),
+  "outline-primary-alt": (
+    "bg-color": transparent,
+    "active-bg-color": $primary-alt-light,
+    "border-color": $primary-alt-light,
+    "active-border-color": $primary-alt-light,
+    "color": $primary-alt-light,
+    "active-color": $white,
+  ),
+  "secondary": (
+    "bg-color": $secondary-light,
+    "active-bg-color": $secondary-dark,
+    "border-color": $secondary-light,
+    "active-border-color": $secondary-dark,
+    "color": $white,
+    "active-color": $white,
+  ),
+  "outline-secondary": (
+    "bg-color": transparent,
+    "active-bg-color": $secondary-dark,
+    "border-color": $secondary-dark,
+    "active-border-color": $secondary-dark,
+    "color": $secondary-dark,
+    "active-color": $white,
+  ),
+  "terciary": (
+    "bg-color": $terciary-light,
+    "active-bg-color": $terciary-dark,
+    "border-color": $terciary-light,
+    "active-border-color": $terciary-dark,
+    "color": $white,
+    "active-color": $white,
+  ),
+  "outline-terciary": (
+    "bg-color": transparent,
+    "active-bg-color": $terciary-dark,
+    "border-color": $terciary-dark,
+    "active-border-color": $terciary-dark,
+    "color": $terciary-dark,
+    "active-color": $white,
+  ),
+  "light": (
+    "bg-color": $white,
+    "active-bg-color": $light,
+    "border-color": $light,
+    "active-border-color": $white,
+    "color": $dark,
+    "active-color": $dark,
+  ),
+  "outline-light": (
+    "bg-color": $dark,
+    "active-bg-color": $light,
+    "border-color": $light,
+    "active-border-color": $light,
+    "color": $white,
+    "active-color": $dark,
+  ),
+  "dark": (
+    "bg-color": $dark,
+    "active-bg-color": $black,
+    "border-color": $black,
+    "active-border-color": $dark,
+    "color": $white,
+    "active-color": $white,
+  ),
+  "outline-dark": (
+    "bg-color": $white,
+    "active-bg-color": $dark,
+    "border-color": $dark,
+    "active-border-color": $dark,
+    "color": $dark,
+    "active-color": $white,
+  ),
+);
 button,
 .btn {
   cursor: pointer;
@@ -10,39 +124,40 @@ button,
 
 .btn {
   --bg-color: transparent;
+  --border-color: transparent;
+  --active-border-color: transparent;
   --active-bg-color: var(--default-text-color);
   --color: var(--default-text-color);
   --active-color: var(--body-bg);
 
   padding: 0.5rem 1rem;
-  font-weight: 500;
+  font-weight: 600;
 
   background-color: var(--bg-color);
   color: var(--color);
-  border: 1px solid var(--active-bg-color);
+  border: 1px solid;
+  border-color: var(--border-color);
   border-radius: var(--border-radius);
   transition: background-color var(--default-animation-duration),
+    border-color var(--default-animation-duration),
     color var(--default-animation-duration);
   &.active,
   &:hover {
+    border-color: var(--active-border-color);
     background-color: var(--active-bg-color);
     color: var(--active-color);
   }
 }
 
-.btn-primary {
-  border: 0;
-  --bg-color: var(--primary-light);
-  --active-bg-color: var(--primary-dark);
-  --color: var(--default-text-color);
-  --active-color: var(--body-bg);
-}
-
-.btn-outline-primary {
-  --bg-color: transparent;
-  --active-bg-color: var(--primary-dark);
-  --color: var(--primary-dark);
-  --active-color: var(--body-bg);
+@each $key-name, $btn in $btns {
+  .btn.btn-#{$key-name} {
+    --bg-color: #{map-get($btn, "bg-color")};
+    --active-bg-color: #{map-get($btn, "active-bg-color")};
+    --color: #{map-get($btn, "color")};
+    --active-color: #{map-get($btn, "active-color")};
+    --border-color: #{map-get($btn, "border-color")};
+    --active-border-color: #{map-get($btn, "active-border-color")};
+  }
 }
 
 .btn.btn-square {

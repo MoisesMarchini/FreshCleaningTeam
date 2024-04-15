@@ -3,7 +3,14 @@ export const environmentDefault = {
 
   routes: {
     home: 'home',
+
+    gallery: 'gallery',
+    cleaningTips: 'cleaning-tips',
+    reviews: 'our-reviews',
+    faq: 'faq',
+    cleaningProcess: 'cleaning-process',
     aboutUs: 'about-us',
+
     service: 'service',
     contact: 'contact',
     termsOfUse: 'terms-of-use',
