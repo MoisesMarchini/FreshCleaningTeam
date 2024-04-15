@@ -7,7 +7,7 @@ header {
   z-index: 100;
 }
 
-header > .container {
+header > .container.logo-row {
   height: var(--nav-height);
   display: flex;
   align-items: center;
@@ -20,13 +20,21 @@ header > .container {
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1rem;
+  @include breakpoint-lg {
+    justify-content: center;
+  }
+  .right {
+    display: inherit;
+    gap: 8px;
+    align-items: center;
+  }
 }
 
 .logo-wrapper {
   max-height: var(--nav-height);
-  width: clamp(120px, 20vw, 150px);
+  width: clamp(110px, 20vw, 150px);
   overflow: hidden;
   padding: 8px 0;
 }
@@ -34,12 +42,38 @@ header > .container {
 .btn {
   font-size: 1rem;
   font-weight: 400;
+  text-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.btn-toggle {
+  width: 32px;
+  height: 32px;
+  padding: 0;
 }
 
 nav {
-  display: none;
-  @include breakpoint-lg {
-    display: flex;
+  display: flex;
+  @include breakpoint-md-only {
+    visibility: hidden;
+    width: 100%;
+    height: 0;
+    background-color: white;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    transition: var(--default-animation-duration);
+    overflow: hidden;
+    ul {
+      flex-direction: column;
+    }
+    ul > .divider {
+      display: none !important;
+    }
+    &.expand {
+      visibility: visible;
+      height: 200px;
+    }
   }
 }
 
@@ -49,7 +83,6 @@ nav > ul {
   gap: 0.25rem;
   align-items: center;
   flex-wrap: nowrap;
-  // overflow-x: auto;
 }
 
 nav > ul > .divider {

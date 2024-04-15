@@ -11,8 +11,6 @@ export const environmentDefault = {
     cleaningProcess: 'cleaning-process',
     aboutUs: 'about-us',
 
-    service: 'service',
-    contact: 'contact',
     termsOfUse: 'terms-of-use',
     privacyPolicy: 'privacy-policy',
   },
@@ -23,18 +21,33 @@ export const environmentDefault = {
       description: '',
       hideHeader: true,
     },
+    gallery: {
+      title: 'Gallery',
+      description: '',
+      hideHeader: false,
+    },
+    cleaningTips: {
+      title: 'Cleaning Tips',
+      description: '',
+      hideHeader: false,
+    },
+    reviews: {
+      title: 'Our Reviews',
+      description: '',
+      hideHeader: false,
+    },
+    faq: {
+      title: 'FAQ',
+      description: '',
+      hideHeader: false,
+    },
+    cleaningProcess: {
+      title: 'Cleaning Process',
+      description: '',
+      hideHeader: false,
+    },
     aboutUs: {
       title: 'About Us',
-      description: '',
-      hideHeader: false,
-    },
-    service: {
-      title: 'Service',
-      description: '',
-      hideHeader: false,
-    },
-    contact: {
-      title: 'Contact Us',
       description: '',
       hideHeader: false,
     },

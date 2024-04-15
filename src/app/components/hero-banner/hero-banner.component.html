@@ -1,9 +1,15 @@
 <div class="hero-wrapper">
-  <video
-    src="/assets/hero/hero-video.mp4"
-    class="hero-video"
-    autoplay
-    muted
-    loop
-  ></video>
+  <div class="video-wrapper">
+    <video
+      #video
+      loop
+      autoplay
+      oncanplay="this.play()"
+      onloadedmetadata="this.muted = true"
+      preload="metadata"
+      [poster]="videoCoverUrl"
+    >
+      <source [src]="videoUrl" type="video/mp4" />
+    </video>
+  </div>
 </div>

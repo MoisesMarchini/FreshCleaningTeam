@@ -1,12 +1,20 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  ElementRef,
+  AfterViewInit,
+} from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
+  host: {
+    id: 'navbar',
+  },
 })
-export class NavbarComponent {
+export class NavbarComponent implements AfterViewInit {
   routes = environment.routes;
   expand = false;
 
@@ -37,7 +45,20 @@ export class NavbarComponent {
     },
   ];
 
-  log(event: any) {
-    console.log(event);
+  constructor(private elementRef: ElementRef) {}
+
+  ngAfterViewInit(): void {
+    this.onResize();
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    const navTotalHeight =
+      this.elementRef.nativeElement.getBoundingClientRect().height;
+
+    document.body.style.setProperty(
+      '--nav-total-height',
+      `${navTotalHeight}px`
+    );
   }
 }

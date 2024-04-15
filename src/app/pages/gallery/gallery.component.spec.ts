@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ServicePage } from './service.component';
+import { GalleryPage } from './gallery.component';
 
-describe('ServiceComponent', () => {
-  let component: ServicePage;
-  let fixture: ComponentFixture<ServicePage>;
+describe('GalleryComponent', () => {
+  let component: GalleryPage;
+  let fixture: ComponentFixture<GalleryPage>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ServicePage]
+      declarations: [GalleryPage],
     });
-    fixture = TestBed.createComponent(ServicePage);
+    fixture = TestBed.createComponent(GalleryPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

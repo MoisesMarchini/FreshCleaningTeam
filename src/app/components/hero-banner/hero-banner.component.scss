@@ -13,31 +13,30 @@
   overflow: hidden;
   margin-top: var(--_top);
   background-color: var(--_hero-bg-color);
+  width: 100%;
+  aspect-ratio: 1.75;
   max-height: var(--_max-height);
   display: grid;
   place-content: center;
-  &::before {
-    content: "";
-    position: absolute;
-
-    // width: 55vmax;
-    // height: 55vmax;
-    // background-color: var(--_hero-bg-color);
-    // bottom: 2rem;
-    // left: 0;
-    // transform: translate(-50%, 50%) rotate(45deg);
-
-    inset: 0;
-    background: linear-gradient(
-      to bottom,
-      var(--body-bg),
-      transparent var(--nav-total-height)
-    );
+  .video-wrapper {
+    position: relative;
+    overflow: hidden;
+    &::before {
+      pointer-events: none;
+      content: "";
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      background: linear-gradient(to bottom, var(--body-bg), transparent 60px);
+    }
   }
-  .hero-video {
+
+  video {
+    position: relative;
     width: 100%;
     height: auto;
     object-fit: cover;
     max-width: 900px;
+    display: block;
   }
 }

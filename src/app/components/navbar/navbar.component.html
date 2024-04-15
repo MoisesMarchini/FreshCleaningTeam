@@ -1,26 +1,41 @@
 <header>
-  <div class="container">
+  <div class="container logo-row">
     <div class="row">
       <div class="logo-wrapper place-content-center">
         <a [routerLink]="routes.home">
           <img src="/assets/logo/logo-transparent.png" alt="" srcset="" />
         </a>
       </div>
-      <button type="button" class="btn btn-primary btn-pill">
-        Request an Estimate
-      </button>
+      <div class="right">
+        <button type="button" class="btn btn-primary btn-pill">
+          Request an Estimate
+        </button>
+        <button
+          type="button"
+          class="d-lg-none btn-toggle btn-outline-primary active btn-pill btn"
+          (click)="expand = !expand"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </div>
   </div>
+  <nav
+    class="container align-items-center justify-content-center py-1"
+    [class.expand]="expand"
+  >
+    <ul>
+      <ng-container *ngFor="let navLink of navLinks; let i = index">
+        <li>
+          <a
+            [routerLink]="navLink.route"
+            (click)="expand = false"
+            routerLinkActive="active"
+            >{{ navLink.title }}</a
+          >
+        </li>
+        <span class="divider" *ngIf="i < navLinks.length - 1"></span>
+      </ng-container>
+    </ul>
+  </nav>
 </header>
-<nav class="container align-items-center justify-content-center py-1">
-  <ul>
-    <ng-container *ngFor="let navLink of navLinks; let i = index">
-      <li>
-        <a [routerLink]="navLink.route" routerLinkActive="active">{{
-          navLink.title
-        }}</a>
-      </li>
-      <span class="divider" *ngIf="i < navLinks.length - 1"></span>
-    </ng-container>
-  </ul>
-</nav>

@@ -5,14 +5,14 @@ import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-route-header',
   templateUrl: './route-header.component.html',
-  styleUrls: ['./route-header.component.scss']
+  styleUrls: ['./route-header.component.scss'],
 })
 export class RouteHeaderComponent {
   private currentUrl = '';
   headerTitle?: {
-    title: string,
-    description: string,
-    hideHeader: boolean
+    title: string;
+    description: string;
+    hideHeader: boolean;
   };
 
   constructor(private router: Router) {
@@ -22,25 +22,22 @@ export class RouteHeaderComponent {
         this.currentUrl = e.url.split('/')[1];
         this.headerTitle = this.refreshTitle();
       }
-    })
+    });
   }
 
   private refreshTitle() {
-    switch (this.currentUrl) {
-      case environment.routes.home:
-        return environment.routeHeaders.home;
-      case environment.routes.aboutUs:
-        return environment.routeHeaders.aboutUs;
-      case environment.routes.service:
-        return environment.routeHeaders.service;
-      case environment.routes.contact:
-        return environment.routeHeaders.contact;
-      case environment.routes.termsOfUse:
-        return environment.routeHeaders.termsOfUse;
-      case environment.routes.privacyPolicy:
-        return environment.routeHeaders.privacyPolicy;
-      default:
-        return environment.routeHeaders.home;
-    }
+    const headerKeys = Object.keys(environment.routeHeaders) as Array<
+      keyof typeof environment.routeHeaders
+    >;
+    const routeKeys = Object.keys(environment.routes) as Array<
+      keyof typeof environment.routes
+    >;
+    const currentRouteKey = routeKeys.find(
+      (key) => environment.routes[key] == this.currentUrl
+    );
+    const currentHeaderKey = headerKeys.find((key) => key == currentRouteKey);
+    if (currentHeaderKey) return environment.routeHeaders[currentHeaderKey];
+
+    return;
   }
 }
