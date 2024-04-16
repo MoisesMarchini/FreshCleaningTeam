@@ -1,1 +1,14 @@
-<p>gallery works!</p>
+<section class="container">
+  <app-carousel
+    [autoplayInterval]="2500"
+    [imgPaths]="getVerticalImages()"
+  ></app-carousel>
+  <app-carousel
+    [autoplayInterval]="2500"
+    [imgPaths]="getHorizontalImages()"
+  ></app-carousel>
+  <app-carousel
+    [autoplayInterval]="2500"
+    [imgPaths]="getVerticalImages(true)"
+  ></app-carousel>
+</section>

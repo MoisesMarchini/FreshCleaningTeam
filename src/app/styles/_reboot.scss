@@ -9,6 +9,7 @@ body {
   background-color: var(--body-bg);
   color: var(--default-text-color);
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 img {

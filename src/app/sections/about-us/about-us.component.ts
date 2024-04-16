@@ -1,32 +1,40 @@
-import { Component } from '@angular/core';
-import { CardImageOptions } from 'src/app/components/cards/card-options';
+import { Component, Input, OnInit } from '@angular/core';
 import { PageSection } from 'src/app/components/page-section/page-section';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-about-us',
   templateUrl: './about-us.component.html',
   styleUrls: ['./about-us.component.scss'],
 })
-export class AboutUsComponent {
-  sections: { [key: string]: PageSection } = {
-    cleaningServices: {
-      title: `Specialized Cleaning Services`,
-      content: [
-        `In addition to our standard cleaning services, we offer specialized solutions to address unique needs. Whether it's post-construction cleanup, move-in/move-out cleaning, or deep cleaning for special occasions, we have the expertise and resources to handle any cleaning challenge.`,
-      ],
-    },
-    cleaningProcess: {
-      title: `Our Cleaning Process`,
-      content: [
-        `At ${environment.defaultWebTitle}, we follow a meticulous cleaning process to ensure that every corner of your home receives the attention it deserves. From dusting and vacuuming to sanitizing and polishing, our comprehensive approach leaves your home fresh, clean, and inviting.`,
-      ],
-    },
-    environmentFriendly: {
-      title: `Environmentally Friendly Practices`,
-      content: [
-        `We care about your home and the planet. That's why we prioritize environmentally friendly cleaning products and practices. Our eco-conscious approach ensures that your home is not only clean but also safe for your family and the environment.`,
-      ],
-    },
+export class AboutUsComponent implements OnInit {
+  @Input() hideTitle: boolean = false;
+  section: PageSection = {
+    title: this.hideTitle == true ? '' : 'About Us',
+    content: [
+      `We are a reliable and experienced company providing domestic and commercial
+      cleaning services. We are located in Long Branch, NJ and proudly serve
+      nearly every city in New Jersey. We know that your home is a place of
+      intimacy and security, not only for you, but for everyone who shares this
+      unique space. Our team is made up of trained and qualified professionals for
+      each type of cleaning. Always focused on details, seeking to meet your needs
+      in the best way possible.`,
+    ],
+    disableGridCols: true,
   };
+
+  ngOnInit(): void {
+    this.section = {
+      title: this.hideTitle == true ? '' : 'About Us',
+      content: [
+        `We are a reliable and experienced company providing domestic and commercial
+        cleaning services. We are located in Long Branch, NJ and proudly serve
+        nearly every city in New Jersey. We know that your home is a place of
+        intimacy and security, not only for you, but for everyone who shares this
+        unique space. Our team is made up of trained and qualified professionals for
+        each type of cleaning. Always focused on details, seeking to meet your needs
+        in the best way possible.`,
+      ],
+      disableGridCols: true,
+    };
+  }
 }

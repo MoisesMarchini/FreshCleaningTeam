@@ -1,0 +1,93 @@
+@import "../../styles/breakpoints";
+
+.layout {
+  gap: 1rem;
+  @include breakpoint-md {
+    grid-template-columns: 1fr 300px;
+    .guide {
+      order: 1;
+    }
+  }
+}
+
+.guide {
+  padding: 8px 0;
+  margin-bottom: auto;
+  top: 1rem;
+  border-left: 1px solid var(--primary-light);
+  li {
+    .nav-link {
+      display: block;
+      padding: 0.25rem 0.75rem;
+      color: var(--muted);
+      text-align: start;
+      background: none;
+      border: 0;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+      margin-left: -2px;
+      color: var(--primary-dark);
+      border-left: 4px solid;
+    }
+  }
+  @include breakpoint-md {
+    position: sticky;
+  }
+}
+
+.accordion-group {
+  border: 0;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  > section {
+    overflow: hidden;
+    &.border-bottom {
+      border-bottom: 2px solid var(--primary-lightest);
+    }
+    > .section-body {
+      margin-left: calc(1rem + 8px);
+      margin-bottom: 3rem;
+      min-height: 0;
+      > ul:first-of-type {
+        padding-top: 0rem;
+      }
+    }
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 56px;
+    .logo-leaf {
+      max-width: 32px;
+    }
+  }
+
+  .section-header,
+  .service-title {
+    color: var(--primary-dark);
+  }
+
+  .cleaning-type-title {
+    margin: 0;
+  }
+
+  .cleaning-services-list,
+  .service-item-list {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  ul,
+  li {
+    list-style-type: disc;
+  }
+
+  li {
+    margin-bottom: 0.25rem;
+  }
+}

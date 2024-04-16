@@ -5,18 +5,18 @@
  * @param baseFilename O nome base do arquivo.
  * @param amount A quantidade de nomes de arquivo a serem gerados.
  * @param filetype O tipo de arquivo (por exemplo, 'jpg', 'png', etc.).
- * @param startAtZero Indica se a contagem dos nomes de arquivo deve começar em zero. Por padrão, começa em um.
+ * @param startAt Indica o índice do primeiro elemento. Por padrão, começa em um.
  * @returns Uma array contendo os nomes de arquivo gerados.
  */
 export function getFilenamesArray(
   baseFilename: string,
   amount: number,
   filetype: string,
-  startAtZero: boolean = false
+  startAt: number = 1
 ) {
   const filenamesArray: string[] = [];
 
-  for (let i = startAtZero ? 0 : 1; i <= amount; i++) {
+  for (let i = startAt; i <= amount; i++) {
     const filename = `${baseFilename} (${i}).${filetype}`;
     filenamesArray.push(filename);
   }

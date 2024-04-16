@@ -9,6 +9,7 @@ import { PageSectionComponent } from './page-section/page-section.component';
 import { CardsModule } from './cards/cards.module';
 import { CarouselComponent } from './carousel/carousel.component';
 import { SliderComponent } from './slider/slider.component';
+import { AccordionComponent } from './accordion/accordion.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SliderComponent } from './slider/slider.component';
     PageSectionComponent,
     CarouselComponent,
     SliderComponent,
+    AccordionComponent,
   ],
   imports: [CardsModule, CommonModule, RouterModule],
   exports: [
@@ -30,6 +32,7 @@ import { SliderComponent } from './slider/slider.component';
     PageSectionComponent,
     CarouselComponent,
     SliderComponent,
+    AccordionComponent,
   ],
 })
 export class ComponentsModule {}

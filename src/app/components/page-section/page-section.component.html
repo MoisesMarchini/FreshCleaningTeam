@@ -12,7 +12,10 @@
     class="body-content py-2 my-auto"
     [class.px-5]="!options?.disablePaddingX"
   >
-    <h3 [class]="'mb-2 section-title ' + (options?.customTitleClass ?? '')">
+    <h3
+      *ngIf="!!title"
+      [class]="'mb-2 section-title ' + (options?.customTitleClass ?? '')"
+    >
       {{ title }}
     </h3>
     <p

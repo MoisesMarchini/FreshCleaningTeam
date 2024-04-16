@@ -24,8 +24,8 @@ export class NavbarComponent implements AfterViewInit {
       route: this.routes.gallery,
     },
     {
-      title: 'Cleaning Tips',
-      route: this.routes.cleaningTips,
+      title: 'Cleaning Types',
+      route: this.routes.cleaningTypes,
     },
     {
       title: 'Our Reviews',

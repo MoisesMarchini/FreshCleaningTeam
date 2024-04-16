@@ -6,10 +6,10 @@ import { AboutUsPage } from './pages/about-us/about-us.component';
 import { TermsOfUsePage } from './pages/terms-of-use/terms-of-use.component';
 import { PrivacyPolicyPage } from './pages/privacy-policy/privacy-policy.component';
 import { GalleryPage } from './pages/gallery/gallery.component';
-import { CleaningTipsPage } from './pages/cleaning-tips/cleaning-tips.component';
 import { OurReviewsPage } from './pages/our-reviews/our-reviews.component';
 import { FaqPage } from './pages/faq/faq.component';
 import { CleaningProcessPage } from './pages/cleaning-process/cleaning-process.component';
+import { CleaningTypesPage } from './pages/cleaning-types/cleaning-types.component';
 
 const routes: Routes = [
   {
@@ -21,8 +21,8 @@ const routes: Routes = [
     component: GalleryPage,
   },
   {
-    path: environment.routes.cleaningTips,
-    component: CleaningTipsPage,
+    path: environment.routes.cleaningTypes,
+    component: CleaningTypesPage,
   },
   {
     path: environment.routes.reviews,

@@ -1,0 +1,45 @@
+<div class="layout d-grid">
+  <div class="guide">
+    <ul>
+      <li *ngFor="let cleaningType of cleaningTypes; let i = index">
+        <button
+          class="nav-link"
+          [class.active]="currentSectionOnScreen === cleaningType.title"
+          (click)="scrollIntoElement(generateHtmlId(i))"
+        >
+          {{ cleaningType.title }}
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div class="accordion-group">
+    <ng-container *ngFor="let cleaningType of cleaningTypes; let i = index">
+      <section
+        #section
+        [class.border-bottom]="i < cleaningTypes.length - 1"
+        [id]="generateHtmlId(i)"
+      >
+        <div class="section-header">
+          <img src="/assets/logo/logo-leaf.png" class="logo-leaf" />
+          <h4 class="cleaning-type-title">{{ cleaningType.title }}</h4>
+        </div>
+        <div class="section-body">
+          <ul
+            class="cleaning-services-list"
+            *ngFor="let service of cleaningType.services"
+          >
+            <h5 class="service-title">{{ service.title }}</h5>
+            <ul class="service-item-list">
+              <li
+                class="service-item"
+                *ngFor="let item of service.descriptionList"
+              >
+                {{ item }}
+              </li>
+            </ul>
+          </ul>
+        </div>
+      </section>
+    </ng-container>
+  </div>
+</div>

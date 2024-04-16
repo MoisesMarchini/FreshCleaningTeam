@@ -5,7 +5,7 @@ export const environmentDefault = {
     home: 'home',
 
     gallery: 'gallery',
-    cleaningTips: 'cleaning-tips',
+    cleaningTypes: 'cleaning-types',
     reviews: 'our-reviews',
     faq: 'faq',
     cleaningProcess: 'cleaning-process',
@@ -26,8 +26,8 @@ export const environmentDefault = {
       description: '',
       hideHeader: false,
     },
-    cleaningTips: {
-      title: 'Cleaning Tips',
+    cleaningTypes: {
+      title: 'Cleaning Types',
       description: '',
       hideHeader: false,
     },

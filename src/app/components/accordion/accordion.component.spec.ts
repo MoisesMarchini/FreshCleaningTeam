@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CleaningTipsPage } from './cleaning-tips.component';
+import { AccordionComponent } from './accordion.component';
 
-describe('CleaningTipsComponent', () => {
-  let component: CleaningTipsPage;
-  let fixture: ComponentFixture<CleaningTipsPage>;
+describe('AccordionComponent', () => {
+  let component: AccordionComponent;
+  let fixture: ComponentFixture<AccordionComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CleaningTipsPage],
+      declarations: [AccordionComponent]
     });
-    fixture = TestBed.createComponent(CleaningTipsPage);
+    fixture = TestBed.createComponent(AccordionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

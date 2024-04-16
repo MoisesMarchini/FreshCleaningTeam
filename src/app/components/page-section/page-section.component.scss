@@ -3,6 +3,10 @@ section > .layout {
   place-content: center;
 }
 
+.body-content {
+  max-width: 800px;
+}
+
 .section-title {
   color: var(--primary-dark);
   font-size: 1.75rem;
