@@ -79,48 +79,48 @@ export class CleaningTypesPage implements AfterViewInit {
     {
       title: 'Deep Clean / Spring Cleaning',
       services: [
-        {
-          title: 'Kitchen',
-          descriptionList: [
-            'Cleaning and sanitation of sinks, countertops and tables',
-            'Internal and external cleaning of electrical appliances',
-            'Internal and external stove cleaning and sanitizing',
-            'Internal and external wet cleaning of all cabinets',
-            'Internal and external cleaning of the refrigerator',
-            'Internal and external microwave oven cleaning',
-            'Dust cleaning (baseboards, fans, top corners, walls, cabinets, blinds)',
-            'Internal and external cleaning of glass doors',
-            'Cleaning and sanitizing the floor',
-            'Garbage removal',
-          ],
-        },
-        {
-          title: 'Living and dining room',
-          descriptionList: [
-            'Cleaning and sanitation of tables and chairs',
-            'Wet cleaning and dust swiffer (baseboards, fans, top corners, walls, cabinets, blinds, chandeliers)',
-            'Internal and external cleaning of cabinet glass doors',
-            'Cleaning and sanitizing the floor',
-            'Cleaning of sofas and armchairs',
-          ],
-        },
-        {
-          title: 'Rooms',
-          descriptionList: [
-            'Wet cleaning and dust swiffer (baseboards, fans, upper corners, bedside tables, dressers, blinds, bed headboards, doors and windows)',
-            'Cleaning and sanitizing the floor',
-            'Garbage removal',
-          ],
-        },
-        {
-          title: 'Bathrooms',
-          descriptionList: [
-            'Wet dusting and swiffer cleaning (baseboards, light fixtures, upper corners, blinds, cabinets, doors and windows)',
-            'Cleaning and sanitizing of toilets, bath tubs, sinks, mirrors, glass, and countertops',
-            'Cleaning and sanitizing the floor',
-            'Garbage removal',
-          ],
-        },
+        // {
+        //   title: 'Kitchen',
+        //   descriptionList: [
+        //     'Cleaning and sanitation of sinks, countertops and tables',
+        //     'Internal and external cleaning of electrical appliances',
+        //     'Internal and external stove cleaning and sanitizing',
+        //     'Internal and external wet cleaning of all cabinets',
+        //     'Internal and external cleaning of the refrigerator',
+        //     'Internal and external microwave oven cleaning',
+        //     'Dust cleaning (baseboards, fans, top corners, walls, cabinets, blinds)',
+        //     'Internal and external cleaning of glass doors',
+        //     'Cleaning and sanitizing the floor',
+        //     'Garbage removal',
+        //   ],
+        // },
+        // {
+        //   title: 'Living and dining room',
+        //   descriptionList: [
+        //     'Cleaning and sanitation of tables and chairs',
+        //     'Wet cleaning and dust swiffer (baseboards, fans, top corners, walls, cabinets, blinds, chandeliers)',
+        //     'Internal and external cleaning of cabinet glass doors',
+        //     'Cleaning and sanitizing the floor',
+        //     'Cleaning of sofas and armchairs',
+        //   ],
+        // },
+        // {
+        //   title: 'Rooms',
+        //   descriptionList: [
+        //     'Wet cleaning and dust swiffer (baseboards, fans, upper corners, bedside tables, dressers, blinds, bed headboards, doors and windows)',
+        //     'Cleaning and sanitizing the floor',
+        //     'Garbage removal',
+        //   ],
+        // },
+        // {
+        //   title: 'Bathrooms',
+        //   descriptionList: [
+        //     'Wet dusting and swiffer cleaning (baseboards, light fixtures, upper corners, blinds, cabinets, doors and windows)',
+        //     'Cleaning and sanitizing of toilets, bath tubs, sinks, mirrors, glass, and countertops',
+        //     'Cleaning and sanitizing the floor',
+        //     'Garbage removal',
+        //   ],
+        // },
         {
           title: 'Kitchen cleaning',
           descriptionList: [

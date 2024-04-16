@@ -36,10 +36,6 @@ export class NavbarAltComponent implements AfterViewInit {
       route: this.routes.faq,
     },
     {
-      title: 'Our Cleaning Process',
-      route: this.routes.cleaningProcess,
-    },
-    {
       title: 'About Us',
       route: this.routes.aboutUs,
     },

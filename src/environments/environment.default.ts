@@ -8,7 +8,6 @@ export const environmentDefault = {
     cleaningTypes: 'cleaning-types',
     reviews: 'our-reviews',
     faq: 'faq',
-    cleaningProcess: 'cleaning-process',
     aboutUs: 'about-us',
 
     termsOfUse: 'terms-of-use',
@@ -41,11 +40,6 @@ export const environmentDefault = {
       description: '',
       hideHeader: false,
     },
-    cleaningProcess: {
-      title: 'Cleaning Process',
-      description: '',
-      hideHeader: false,
-    },
     aboutUs: {
       title: 'About Us',
       description: '',
@@ -66,5 +60,12 @@ export const environmentDefault = {
     Facebook: 'https://www.facebook.com/frescleaningteam',
     Instagram: 'https://www.instagram.com/freshcleaningteam',
     GoogleMaps: 'https://maps.app.goo.gl/1qqjgD8BBRuLFnfy6',
+  },
+  smsProps: {
+    number: '+17327990341',
+    body: `Hello! I'd like to inquire about your company's services. Could you please get in touch with me? Thanks!`,
+  },
+  smsLink() {
+    return `sms:${this.smsProps.number}?body=${this.smsProps.body}?`;
   },
 };

@@ -8,7 +8,6 @@ import { PrivacyPolicyPage } from './pages/privacy-policy/privacy-policy.compone
 import { GalleryPage } from './pages/gallery/gallery.component';
 import { OurReviewsPage } from './pages/our-reviews/our-reviews.component';
 import { FaqPage } from './pages/faq/faq.component';
-import { CleaningProcessPage } from './pages/cleaning-process/cleaning-process.component';
 import { CleaningTypesPage } from './pages/cleaning-types/cleaning-types.component';
 
 const routes: Routes = [
@@ -31,10 +30,6 @@ const routes: Routes = [
   {
     path: environment.routes.faq,
     component: FaqPage,
-  },
-  {
-    path: environment.routes.cleaningProcess,
-    component: CleaningProcessPage,
   },
   {
     path: environment.routes.aboutUs,

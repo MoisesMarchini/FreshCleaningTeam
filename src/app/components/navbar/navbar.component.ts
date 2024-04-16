@@ -23,6 +23,7 @@ export class NavbarComponent implements AfterViewInit {
   routes = environment.routes;
   expand = false;
   isSticked = false;
+  smsLink = environment.smsLink();
 
   navLinks = [
     {
@@ -40,10 +41,6 @@ export class NavbarComponent implements AfterViewInit {
     {
       title: 'FAQ',
       route: this.routes.faq,
-    },
-    {
-      title: 'Our Cleaning Process',
-      route: this.routes.cleaningProcess,
     },
     {
       title: 'About Us',
