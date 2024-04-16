@@ -13,7 +13,7 @@
 .guide {
   padding: 8px 0;
   margin-bottom: auto;
-  top: 1rem;
+  top: calc(1rem + var(--nav-total-height));
   border-left: 1px solid var(--primary-light);
   li {
     .nav-link {

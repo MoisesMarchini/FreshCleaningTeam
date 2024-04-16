@@ -5,6 +5,7 @@ import {
   HostListener,
   ViewChildren,
 } from '@angular/core';
+import { navProps } from 'src/app/components/navbar/navbar.component';
 
 @Component({
   selector: 'app-cleaning-types',
@@ -16,7 +17,6 @@ import {
 })
 export class CleaningTypesPage implements AfterViewInit {
   @ViewChildren('section') sections?: ElementRef<HTMLElement>[];
-  currentSectionOnScreen: string = '';
   cleaningTypes: CleaningType[] = [
     {
       title: 'Regular Cleaning',
@@ -372,14 +372,19 @@ export class CleaningTypesPage implements AfterViewInit {
     },
   ];
 
+  currentSectionOnScreen: string = this.cleaningTypes[0].title;
+  get navHeight() {
+    return navProps.totalHeight;
+  }
+
+  teste = true;
+
   @HostListener('window:scroll')
   onScroll() {
     this.updateVisibleSection();
   }
 
-  ngAfterViewInit(): void {
-    this.updateVisibleSection();
-  }
+  ngAfterViewInit(): void {}
 
   updateVisibleSection() {
     const viewportTop = window.scrollY;
@@ -425,9 +430,16 @@ export class CleaningTypesPage implements AfterViewInit {
     const element = this.sections.find(
       (el) => el.nativeElement.id === elementId
     );
-    element?.nativeElement.scrollIntoView({
-      behavior: 'smooth',
-    });
+
+    if (!element) return;
+
+    const y = element.nativeElement.offsetTop - this.navHeight;
+
+    // element?.nativeElement.scrollIntoView({
+    //   behavior: 'smooth',
+    // });
+
+    window.scrollTo(0, y);
   }
 }
 

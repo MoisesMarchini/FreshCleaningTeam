@@ -6,6 +6,10 @@ import {
 } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
+export const navProps = {
+  totalHeight: 0,
+};
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -55,6 +59,8 @@ export class NavbarComponent implements AfterViewInit {
   onResize() {
     const navTotalHeight =
       this.elementRef.nativeElement.getBoundingClientRect().height;
+
+    navProps.totalHeight = navTotalHeight;
 
     document.body.style.setProperty(
       '--nav-total-height',
