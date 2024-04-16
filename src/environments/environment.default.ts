@@ -63,7 +63,7 @@ export const environmentDefault = {
   },
   smsProps: {
     number: '+17327990341',
-    body: `Hello! I'd like to inquire about your company's services. Could you please get in touch with me? Thanks!`,
+    body: `Hello! I would like a free estimate`,
   },
   smsLink() {
     return `sms:${this.smsProps.number}?body=${this.smsProps.body}?`;
