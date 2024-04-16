@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -6,12 +6,11 @@ import { environment } from 'src/environments/environment';
   templateUrl: './hero-banner.component.html',
   styleUrls: ['./hero-banner.component.scss'],
 })
-export class HeroBannerComponent {
-  loaded = false;
+export class HeroBannerComponent implements OnInit {
   title: string = environment.defaultWebTitle;
-  description: string =
-    'We provide professional home cleaning services, <br>giving you peace of mind and freedom to enjoy your space worry-free.';
 
   videoUrl = '/assets/hero/hero-video.mp4';
   videoCoverUrl = '/assets/hero/hero-cover.png';
+
+  ngOnInit(): void {}
 }

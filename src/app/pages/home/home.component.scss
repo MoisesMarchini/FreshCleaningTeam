@@ -1,0 +1,12 @@
+.card-icons-layout {
+  gap: 1px;
+  background-color: var(--content-bg-alt);
+  > * {
+    background-color: var(--white);
+  }
+}
+
+.layout-container {
+  margin-top: 2rem;
+  gap: 6rem;
+}
