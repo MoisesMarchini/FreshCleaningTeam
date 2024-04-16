@@ -15,7 +15,8 @@
           class="d-md-none btn-toggle btn-outline-primary active btn-pill btn"
           (click)="expand = !expand"
         >
-          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-bars btn-icon" [class.show]="!expand"></i>
+          <i class="fa-solid fa-xmark btn-icon" [class.show]="expand"></i>
         </button>
       </div>
     </div>
