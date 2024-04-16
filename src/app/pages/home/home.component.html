@@ -1,1 +1,9 @@
 <app-hero-banner></app-hero-banner>
+<div class="container">
+  <app-section-card-over-image
+    *ngFor="let options of cardOverImageOptions; let i = index"
+    [options]="options"
+    [directionReverse]="i % 2 == 0"
+  ></app-section-card-over-image>
+</div>
+<app-gmaps-localization></app-gmaps-localization>

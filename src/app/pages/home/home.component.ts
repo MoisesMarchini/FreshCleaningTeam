@@ -4,6 +4,7 @@ import {
   CardImageOptions,
 } from 'src/app/components/cards/card-options';
 import { PageSection } from 'src/app/components/page-section/page-section';
+import { SectionCardOverImageOptions } from 'src/app/components/section-card-over-image/section-card-over-image.component';
 import { getFilenamesArray } from 'src/app/helpers/functions';
 import { environment } from 'src/environments/environment';
 
@@ -13,6 +14,26 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./home.component.scss'],
 })
 export class HomePage {
+  cardOverImageOptions: SectionCardOverImageOptions[] = [
+    {
+      markUp: 'Mark-Up',
+      title: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.`,
+      body: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae ullam
+      recusandae nisi eum eaque perspiciatis rerum odio dicta. Exercitationem
+      quia deleniti dolorum maxime obcaecati non ratione. Dolor, voluptatum.
+      Recusandae!`,
+      imagePath: '1.jpg',
+    },
+    {
+      markUp: 'Mark-Up',
+      title: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.`,
+      body: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae ullam
+      recusandae nisi eum eaque perspiciatis rerum odio dicta. Exercitationem
+      quia deleniti dolorum maxime obcaecati non ratione. Dolor, voluptatum.
+      Recusandae!`,
+      imagePath: '2.jpg',
+    },
+  ];
   cardIcons: CardIconOptions[] = [
     {
       title: `Personalized Residential Cleaning Services`,

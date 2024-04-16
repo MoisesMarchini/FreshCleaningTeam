@@ -1,0 +1,14 @@
+<div class="wrapper mb-10" [class.reverse]="directionReverse">
+  <div class="left">
+    <div class="left-content">
+      <span class="mark-up">{{ options.markUp }}</span>
+      <h2 class="content-title">
+        {{ options.title }}
+      </h2>
+      <p [innerHTML]="options.body"></p>
+    </div>
+  </div>
+  <div class="right">
+    <img [src]="imagesRootPath + options.imagePath" alt="" />
+  </div>
+</div>

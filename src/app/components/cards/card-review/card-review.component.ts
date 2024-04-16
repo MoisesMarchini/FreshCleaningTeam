@@ -10,7 +10,5 @@ export class CardReviewComponent implements OnInit {
   @Input() options?: CardReviewOptions;
   reviewArray = [0, 1, 2, 3, 4];
 
-  ngOnInit(): void {
-    console.log(this.options ?? 'ops');
-  }
+  ngOnInit(): void {}
 }

@@ -79,8 +79,6 @@ export class OurReviewsPage implements AfterViewInit {
 
     const nativeElement = this.reviewsElement.nativeElement;
     const childNodes = nativeElement.childNodes;
-    console.log(this.reviews.length);
-    console.log(childNodes.length);
 
     nativeElement.append(childNodes[0]);
   }
