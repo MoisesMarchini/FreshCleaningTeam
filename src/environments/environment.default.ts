@@ -13,7 +13,6 @@ export const environmentDefault = {
     termsOfUse: 'terms-of-use',
     privacyPolicy: 'privacy-policy',
   },
-
   routeHeaders: {
     home: {
       title: 'Home',
@@ -66,6 +65,6 @@ export const environmentDefault = {
     body: `Hello! I would like a free estimate`,
   },
   smsLink() {
-    return `sms:${this.smsProps.number}?body=${this.smsProps.body}?`;
+    return `sms:${this.smsProps.number}?body=${this.smsProps.body}`;
   },
 };
