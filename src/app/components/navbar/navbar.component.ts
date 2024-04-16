@@ -20,33 +20,12 @@ export const navProps = {
 })
 export class NavbarComponent implements AfterViewInit {
   webTitle = environment.defaultWebTitle;
-  routes = environment.routes;
+  homeRoute = environment.routes.home;
   expand = false;
   isSticked = false;
   smsLink = environment.smsLink();
 
-  navLinks = [
-    {
-      title: 'Gallery',
-      route: this.routes.gallery,
-    },
-    {
-      title: 'Cleaning Types',
-      route: this.routes.cleaningTypes,
-    },
-    {
-      title: 'Our Reviews',
-      route: this.routes.reviews,
-    },
-    {
-      title: 'FAQ',
-      route: this.routes.faq,
-    },
-    {
-      title: 'About Us',
-      route: this.routes.aboutUs,
-    },
-  ];
+  navLinks = environment.navLinks();
 
   constructor(private elementRef: ElementRef) {}
 

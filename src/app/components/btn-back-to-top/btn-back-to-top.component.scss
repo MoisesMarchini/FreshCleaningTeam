@@ -1,0 +1,12 @@
+.btn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 1.5rem;
+  aspect-ratio: 1;
+  transform: translateY(200%);
+  transition: all var(--default-animation-duration);
+  &.show {
+    transform: translateY(0%);
+  }
+}

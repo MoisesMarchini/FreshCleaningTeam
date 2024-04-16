@@ -64,6 +64,30 @@ export const environmentDefault = {
     number: '+17327990341',
     body: `Hello! I would like a free estimate`,
   },
+  navLinks() {
+    return [
+      {
+        title: 'Gallery',
+        route: this.routes.gallery,
+      },
+      {
+        title: 'Cleaning Types',
+        route: this.routes.cleaningTypes,
+      },
+      {
+        title: 'Our Reviews',
+        route: this.routes.reviews,
+      },
+      {
+        title: 'FAQ',
+        route: this.routes.faq,
+      },
+      {
+        title: 'About Us',
+        route: this.routes.aboutUs,
+      },
+    ];
+  },
   smsLink() {
     return `sms:${this.smsProps.number}?body=${this.smsProps.body}`;
   },
