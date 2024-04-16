@@ -1,0 +1,28 @@
+<ng-container *ngIf="options">
+  <div class="card d-flex align-items-start border">
+    <div class="review-img-wrapper">
+      <span>{{ options.title.charAt(0) }}</span>
+      <img
+        *ngIf="options.profilePic"
+        [src]="options.profilePic"
+        class="review-img"
+      />
+    </div>
+    <div class="card-content ms-2 d-flex flex-column">
+      <h5 class="review-title fs-14 m-0">
+        {{ options.title }}
+      </h5>
+      <div class="review-stars mb-1">
+        <ng-container *ngFor="let reviewStars of reviewArray">
+          <i
+            [class]="
+              (reviewStars < options.stars ? 'fa-solid' : 'fa-regular') +
+              ' fa-star'
+            "
+          ></i>
+        </ng-container>
+      </div>
+      <p class="review-body" [innerHTML]="options.content"></p>
+    </div>
+  </div>
+</ng-container>

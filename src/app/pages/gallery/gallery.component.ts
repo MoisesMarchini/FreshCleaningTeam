@@ -6,6 +6,9 @@ import { getFilenamesArray } from 'src/app/helpers/functions';
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss'],
+  host: {
+    class: 'container',
+  },
 })
 export class GalleryPage {
   private verticalMidPoint = 24;

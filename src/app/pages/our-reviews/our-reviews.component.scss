@@ -1,0 +1,105 @@
+.reviews-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding: 1rem;
+  position: relative;
+}
+
+.control {
+  --_linear-initial: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(2rem, 10vw, 5rem);
+  z-index: 10;
+  border: 0;
+  transition: all var(--default-animation-duration);
+  > * {
+    transition: inherit;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    opacity: 0;
+    transform: translateX(var(--_before-x));
+    z-index: -1;
+  }
+  &:hover {
+    &::before {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  &.control-right {
+    --_before-x: 100%;
+    right: 0;
+    background: linear-gradient(
+      to left,
+      var(--white) var(--_linear-initial),
+      transparent
+    );
+    &:hover > i {
+      transform: translateX(4px);
+    }
+  }
+  &.control-left {
+    --_before-x: -100%;
+    left: 0;
+    background: linear-gradient(
+      to right,
+      var(--white) var(--_linear-initial),
+      transparent
+    );
+    &:hover > i {
+      transform: translateX(-4px);
+    }
+  }
+}
+
+.reviews {
+  --_review-index: 0;
+  --_card-width: min(70vw, 600px);
+  --_gap: 1.5rem;
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  align-items: center;
+  gap: var(--_gap);
+  > * {
+    left: 50%;
+    position: absolute;
+    transition: transform calc(var(--default-animation-duration) * 2),
+      opacity calc(var(--default-animation-duration) * 2);
+    width: var(--_card-width);
+    flex-shrink: 0;
+  }
+  :nth-child(1) {
+    transform: translateX(calc(-50% - (var(--_card-width) + var(--_gap)) * 2));
+    opacity: 0.5;
+  }
+  :nth-child(2) {
+    transform: translateX(calc(-50% - (var(--_card-width) + var(--_gap))));
+    opacity: 0.5;
+  }
+  :nth-child(3) {
+    transform: translateX(-50%);
+  }
+  :nth-child(4) {
+    transform: translateX(calc(-50% + (var(--_card-width) + var(--_gap))));
+    opacity: 0.5;
+  }
+  :nth-child(5) {
+    transform: translateX(calc(-50% + (var(--_card-width) + var(--_gap)) * 2));
+    opacity: 0.5;
+  }
+  :nth-child(n + 6) {
+    transform: translateX(300%);
+    opacity: 0;
+  }
+}

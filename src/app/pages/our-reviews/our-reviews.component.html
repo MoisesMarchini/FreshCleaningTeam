@@ -1,1 +1,17 @@
-<p>our-reviews works!</p>
+<div class="reviews-wrapper">
+  <div class="btns d-flex">
+    <button class="control control-left" (click)="prev()">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button class="control control-right" (click)="next()">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+  <div class="reviews" #reviewsElement>
+    <app-card-review
+      *ngFor="let options of reviews; let i = index"
+      [style]="'--_review-index: ' + i"
+      [options]="options"
+    ></app-card-review>
+  </div>
+</div>

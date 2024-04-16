@@ -4,5 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-faq',
   templateUrl: './faq.component.html',
   styleUrls: ['./faq.component.scss'],
+  host: {
+    class: 'container',
+  },
 })
 export class FaqPage {}
