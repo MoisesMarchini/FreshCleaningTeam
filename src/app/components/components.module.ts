@@ -10,6 +10,7 @@ import { CardsModule } from './cards/cards.module';
 import { CarouselComponent } from './carousel/carousel.component';
 import { GmapsLocalizationComponent } from './gmaps-localization/gmaps-localization.component';
 import { SectionCardOverImageComponent } from './section-card-over-image/section-card-over-image.component';
+import { BtnBackToTopComponent } from './btn-back-to-top/btn-back-to-top.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SectionCardOverImageComponent } from './section-card-over-image/section
     CarouselComponent,
     GmapsLocalizationComponent,
     SectionCardOverImageComponent,
+    BtnBackToTopComponent,
   ],
   imports: [CardsModule, CommonModule, RouterModule],
   exports: [
@@ -33,6 +35,7 @@ import { SectionCardOverImageComponent } from './section-card-over-image/section
     CarouselComponent,
     GmapsLocalizationComponent,
     SectionCardOverImageComponent,
+    BtnBackToTopComponent,
   ],
 })
 export class ComponentsModule {}

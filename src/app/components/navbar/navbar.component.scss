@@ -111,9 +111,10 @@ nav > ul {
 
 nav > ul > .divider {
   width: 6px;
-  height: 1px;
   display: block;
+  border-bottom: 2px solid var(--_link-color);
   background-color: var(--_link-color);
+  opacity: 0.75;
 }
 
 nav > ul > li > a {
@@ -122,9 +123,13 @@ nav > ul > li > a {
   color: var(--_link-color);
   padding: 0.25rem 0.5rem;
   transition: opacity var(--default-animation-duration);
+  font-weight: 700;
+  font-size: 0.875rem;
+  opacity: 0.75;
   &.active,
   &:hover {
     --_link-color: var(--primary-dark);
+    opacity: 1;
     &::before {
       width: 100%;
     }
