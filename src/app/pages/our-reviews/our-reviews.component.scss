@@ -78,25 +78,23 @@
       opacity calc(var(--default-animation-duration) * 2);
     width: var(--_card-width);
     flex-shrink: 0;
+    opacity: 0.5;
   }
   :nth-child(1) {
     transform: translateX(calc(-50% - (var(--_card-width) + var(--_gap)) * 2));
-    opacity: 0.5;
   }
   :nth-child(2) {
     transform: translateX(calc(-50% - (var(--_card-width) + var(--_gap))));
-    opacity: 0.5;
   }
   :nth-child(3) {
     transform: translateX(-50%);
+    opacity: 1;
   }
   :nth-child(4) {
     transform: translateX(calc(-50% + (var(--_card-width) + var(--_gap))));
-    opacity: 0.5;
   }
   :nth-child(5) {
     transform: translateX(calc(-50% + (var(--_card-width) + var(--_gap)) * 2));
-    opacity: 0.5;
   }
   :nth-child(n + 6) {
     transform: translateX(300%);

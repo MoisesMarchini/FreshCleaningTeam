@@ -65,5 +65,6 @@ export const environmentDefault = {
   socialMediaLinks: {
     Facebook: 'https://www.facebook.com/frescleaningteam',
     Instagram: 'https://www.instagram.com/freshcleaningteam',
+    GoogleMaps: 'https://maps.app.goo.gl/1qqjgD8BBRuLFnfy6',
   },
 };
