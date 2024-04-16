@@ -1,0 +1,46 @@
+<header [class.sticked]="isSticked">
+  <h1 class="visibility-hidden">{{ webTitle }}</h1>
+  <div class="container logo-row">
+    <div class="row">
+      <div class="logo-wrapper place-content-center">
+        <a [routerLink]="routes.home">
+          <img src="/assets/logo/logo-transparent.png" alt="" srcset="" />
+        </a>
+      </div>
+      <div class="right">
+        <div class="d-flex">
+          <button type="button" class="btn btn-primary btn-pill">
+            Request an Estimate
+          </button>
+          <button
+            type="button"
+            class="d-md-none btn-toggle btn-outline-primary active btn-pill btn"
+            (click)="expand = !expand"
+          >
+            <i class="fa-solid fa-bars btn-icon" [class.show]="!expand"></i>
+            <i class="fa-solid fa-xmark btn-icon" [class.show]="expand"></i>
+          </button>
+        </div>
+
+        <nav
+          class="align-items-center justify-content-center"
+          [class.expand]="expand"
+        >
+          <ul>
+            <ng-container *ngFor="let navLink of navLinks; let i = index">
+              <li>
+                <a
+                  [routerLink]="navLink.route"
+                  (click)="expand = false"
+                  routerLinkActive="active"
+                  >{{ navLink.title }}</a
+                >
+              </li>
+              <!-- <span class="divider" *ngIf="i < navLinks.length - 1"></span> -->
+            </ng-container>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

@@ -31,13 +31,13 @@ export class HomePage {
       recusandae nisi eum eaque perspiciatis rerum odio dicta. Exercitationem
       quia deleniti dolorum maxime obcaecati non ratione. Dolor, voluptatum.
       Recusandae!`,
-      imagePath: '2.jpg',
+      imagePath: '2.jpeg',
     },
   ];
   cardIcons: CardIconOptions[] = [
     {
       title: `Personalized Residential Cleaning Services`,
-      content: `At ${environment.defaultWebTitle}, we believe that every home is unique and deserves personalized treatment. We offer a variety of residential cleaning services tailored to your specific needs. From basic cleaning to more detailed services such as window cleaning and carpet washing, we're here to make your home spotless in every corner.`,
+      content: `At ${environment.defaultWebTitle}, we believe that every home is unique and deserves personalized treatment. We offer a variety of residential cleaning services tailored to your specific needs. From basic cleaning to more detailed services, we're here to make your home spotless in every corner.`,
       flexDirection: 'column',
       // swapDirectionAtBreakpoint: 'lg',
       fontawesomeIconClass: 'fa-solid fa-broom',

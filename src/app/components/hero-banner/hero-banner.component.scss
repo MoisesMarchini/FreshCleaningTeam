@@ -22,14 +22,6 @@
   .video-wrapper {
     position: relative;
     overflow: hidden;
-    &::before {
-      pointer-events: none;
-      content: "";
-      position: absolute;
-      z-index: 1;
-      inset: 0;
-      background: linear-gradient(to bottom, var(--body-bg), transparent 60px);
-    }
   }
 
   video {

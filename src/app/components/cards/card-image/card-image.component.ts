@@ -9,19 +9,19 @@ import { CardImageOptions } from '../card-options';
 export class CardImageComponent {
   @Input() options?: CardImageOptions;
 
-  static _currentCard?: CardImageComponent = undefined;
+  static _isHover: boolean = false;
 
-  @HostBinding('class.inactive') get isCurrentCard() {
-    return CardImageComponent._currentCard !== (this && undefined);
+  @HostBinding('class.inactive') get isHover() {
+    return CardImageComponent._isHover;
   }
 
-  @HostListener('pointerenter', ['$event'])
-  onHover(ev: any) {
-    CardImageComponent._currentCard = this;
+  @HostListener('pointerenter')
+  onHover() {
+    CardImageComponent._isHover = true;
   }
 
-  @HostListener('pointerleave', ['$event'])
-  onLeave(ev: any) {
-    CardImageComponent._currentCard = undefined;
+  @HostListener('pointerleave')
+  onLeave() {
+    CardImageComponent._isHover = false;
   }
 }

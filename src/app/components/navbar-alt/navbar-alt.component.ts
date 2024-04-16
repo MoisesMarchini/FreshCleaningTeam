@@ -1,24 +1,18 @@
 import {
-  Component,
-  HostListener,
-  ElementRef,
   AfterViewInit,
+  Component,
+  ElementRef,
+  HostListener,
 } from '@angular/core';
 import { environment } from 'src/environments/environment';
-
-export const navProps = {
-  totalHeight: 0,
-};
+import { navProps } from '../navbar/navbar.component';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss'],
-  host: {
-    id: 'navbar',
-  },
+  selector: 'app-navbar-alt',
+  templateUrl: './navbar-alt.component.html',
+  styleUrls: ['./navbar-alt.component.scss'],
 })
-export class NavbarComponent implements AfterViewInit {
+export class NavbarAltComponent implements AfterViewInit {
   webTitle = environment.defaultWebTitle;
   routes = environment.routes;
   expand = false;

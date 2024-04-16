@@ -11,6 +11,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { GmapsLocalizationComponent } from './gmaps-localization/gmaps-localization.component';
 import { SectionCardOverImageComponent } from './section-card-over-image/section-card-over-image.component';
 import { BtnBackToTopComponent } from './btn-back-to-top/btn-back-to-top.component';
+import { NavbarAltComponent } from './navbar-alt/navbar-alt.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { BtnBackToTopComponent } from './btn-back-to-top/btn-back-to-top.compone
     GmapsLocalizationComponent,
     SectionCardOverImageComponent,
     BtnBackToTopComponent,
+    NavbarAltComponent,
   ],
   imports: [CardsModule, CommonModule, RouterModule],
   exports: [
@@ -36,6 +38,7 @@ import { BtnBackToTopComponent } from './btn-back-to-top/btn-back-to-top.compone
     GmapsLocalizationComponent,
     SectionCardOverImageComponent,
     BtnBackToTopComponent,
+    NavbarAltComponent,
   ],
 })
 export class ComponentsModule {}

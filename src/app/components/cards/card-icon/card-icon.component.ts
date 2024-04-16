@@ -1,4 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  HostBinding,
+  HostListener,
+  Input,
+  OnInit,
+} from '@angular/core';
 import { CardIconOptions, CardOptions } from '../card-options';
 
 @Component({
@@ -8,6 +14,22 @@ import { CardIconOptions, CardOptions } from '../card-options';
 })
 export class CardIconComponent implements OnInit {
   @Input() options?: CardIconOptions;
+
+  static _isHover: boolean = false;
+
+  @HostBinding('class.inactive') get isHover() {
+    return CardIconComponent._isHover;
+  }
+
+  @HostListener('pointerenter')
+  onHover() {
+    CardIconComponent._isHover = true;
+  }
+
+  @HostListener('pointerleave')
+  onLeave() {
+    CardIconComponent._isHover = false;
+  }
 
   ngOnInit(): void {
     this.options = new CardIconOptions(this.options);

@@ -1,9 +1,25 @@
+:host.inactive .card {
+  opacity: 0.5;
+  filter: grayscale(1);
+}
+
 .card {
   padding: 1rem 2rem;
   gap: 2rem;
   min-height: 100%;
   align-items: center;
   justify-content: start;
+  transition: all var(--default-animation-duration);
+  border: 1px solid transparent;
+  margin: -1px;
+  position: relative;
+  &:hover {
+    filter: grayscale(0) !important;
+    opacity: 1 !important;
+    box-shadow: 0px 4px 20px #0000001a;
+    z-index: 10;
+    border-color: var(--content-bg-alt);
+  }
 }
 
 .icon-wrapper {
@@ -12,17 +28,6 @@
   place-content: center;
   width: 120px;
   height: 120px;
-  &::before {
-    content: "";
-    position: absolute;
-    width: 85px;
-    height: 85px;
-    right: 0;
-    bottom: 0;
-    background-image: url(/assets/svgs/dots-bg.svg);
-    background-repeat: no-repeat;
-    background-position: bottom right;
-  }
   > .icon {
     background-color: var(--white);
     color: var(--primary-light);
@@ -31,9 +36,6 @@
     height: 90px;
     display: grid;
     place-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 }
 
