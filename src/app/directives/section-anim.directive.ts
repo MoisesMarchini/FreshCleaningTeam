@@ -16,7 +16,9 @@ export class SectionAnimDirective implements OnInit {
 
   constructor(private elementRef: ElementRef<HTMLElement>) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.onWindowScroll();
+  }
 
   @HostListener('window:scroll')
   onWindowScroll() {

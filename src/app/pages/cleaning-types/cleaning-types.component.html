@@ -15,6 +15,7 @@
   <div class="accordion-group">
     <ng-container *ngFor="let cleaningType of cleaningTypes; let i = index">
       <section
+        class="no-anim"
         #section
         [class.border-bottom]="i < cleaningTypes.length - 1"
         [id]="generateHtmlId(i)"
