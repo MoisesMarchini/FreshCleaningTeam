@@ -1,21 +1,29 @@
 <app-hero-banner></app-hero-banner>
 <div class="container layout-container d-grid">
-  <app-section-card-over-image
-    [options]="cardOverImageOptions[0]"
-    [directionReverse]="false"
-  ></app-section-card-over-image>
+  <section class="testando">
+    <app-section-card-over-image
+      [options]="cardOverImageOptions[0]"
+      [directionReverse]="false"
+    ></app-section-card-over-image>
+  </section>
 
-  <div class="card-icons-layout d-grid grid-md-cols-3">
-    <app-card-icon
-      *ngFor="let options of cardIcons"
-      [options]="options"
-    ></app-card-icon>
-  </div>
+  <section>
+    <div class="card-icons-layout d-grid grid-md-cols-3">
+      <app-card-icon
+        *ngFor="let options of cardIcons"
+        [options]="options"
+      ></app-card-icon>
+    </div>
+  </section>
 
-  <app-section-card-over-image
-    [options]="cardOverImageOptions[1]"
-    [directionReverse]="true"
-  ></app-section-card-over-image>
+  <section>
+    <app-section-card-over-image
+      [options]="cardOverImageOptions[1]"
+      [directionReverse]="true"
+    ></app-section-card-over-image>
+  </section>
 
-  <app-gmaps-localization></app-gmaps-localization>
+  <section>
+    <app-gmaps-localization></app-gmaps-localization>
+  </section>
 </div>

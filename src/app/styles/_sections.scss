@@ -1,0 +1,17 @@
+section {
+  --_anim-duration: 0.875s;
+  --_anim-delay: 0ms;
+  transition: opacity var(--_anim-duration), transform var(--_anim-duration);
+  transition-timing-function: ease-out;
+  transition-delay: var(--_anim-delay);
+}
+
+section.hide-section:not(.no-anim) {
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.no-anim section.hide-section {
+  transform: translateY(0px);
+  opacity: 1;
+}

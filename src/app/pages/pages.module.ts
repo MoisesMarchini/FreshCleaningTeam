@@ -11,6 +11,8 @@ import { FaqPage } from './faq/faq.component';
 import { OurReviewsPage } from './our-reviews/our-reviews.component';
 import { CleaningTypesPage } from './cleaning-types/cleaning-types.component';
 import { RouterModule } from '@angular/router';
+import { DirectivesModule } from '../directives/directives.module';
+import { SectionAnimDirective } from '../directives/section-anim.directive';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,13 @@ import { RouterModule } from '@angular/router';
     OurReviewsPage,
     CleaningTypesPage,
   ],
-  imports: [CommonModule, ComponentsModule, SectionsModule, RouterModule],
+  imports: [
+    CommonModule,
+    ComponentsModule,
+    SectionsModule,
+    RouterModule,
+    DirectivesModule,
+  ],
+  providers: [SectionAnimDirective],
 })
 export class PagesModule {}

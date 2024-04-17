@@ -18,12 +18,14 @@
     >
       {{ title }}
     </h3>
-    <p
-      *ngFor="let item of content"
-      [class]="'section-content ' + (options?.customContentClass ?? '')"
-    >
-      {{ item }}
-    </p>
+    <ng-container *ngIf="content.length">
+      <p
+        *ngFor="let item of content"
+        [class]="'section-content ' + (options?.customContentClass ?? '')"
+      >
+        {{ item }}
+      </p>
+    </ng-container>
   </div>
   <ng-content select=".custom-right-content"></ng-content>
 </div>
