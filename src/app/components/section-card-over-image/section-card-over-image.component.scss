@@ -68,3 +68,9 @@
     }
   }
 }
+
+@include breakpoint-sd-only {
+  .content-title {
+    font-size: 1.875rem;
+  }
+}
