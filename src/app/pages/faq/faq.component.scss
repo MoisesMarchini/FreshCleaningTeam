@@ -1,0 +1,18 @@
+.card {
+  &.expand .body {
+    display: block;
+  }
+  .title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  .body {
+    display: none;
+    font-size: 0.875rem;
+    margin: 0;
+    a {
+      color: red !important;
+    }
+  }
+}

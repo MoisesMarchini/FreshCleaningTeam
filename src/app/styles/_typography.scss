@@ -62,6 +62,10 @@ p,
   font-size: 0.875rem;
 }
 
+.text-decoration-underline {
+  text-decoration: underline;
+}
+
 $text-alignments: center end start justify left right;
 @each $alignment in $text-alignments {
   .text-#{$alignment} {

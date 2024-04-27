@@ -1,1 +1,33 @@
-<p>faq works!</p>
+<div class="container d-grid">
+  <button
+    type="button"
+    class="btn btn-primary mb-4 me-auto"
+    (click)="expandAll = !expandAll"
+  >
+    {{ !expandAll ? "Expand" : "Collapse" }} All
+  </button>
+  <ul class="d-grid gap-2 mb-4">
+    <li *ngFor="let card of cards; let i = index" class="show-anim">
+      <div
+        class="card border border-black d-grid gap-2 p-2"
+        (click)="setCard(i)"
+        [class.expand]="i === currentCardIndex || expandAll"
+      >
+        <p
+          class="title d-flex gap-4 justify-content-space-between align-items-center"
+        >
+          <span>
+            {{ card.title }}
+          </span>
+          <i
+            [class]="
+              'fa-solid fa-chevron-' +
+              (i === currentCardIndex || expandAll ? 'up' : 'down')
+            "
+          ></i>
+        </p>
+        <p class="body" [innerHTML]="card.body"></p>
+      </div>
+    </li>
+  </ul>
+</div>

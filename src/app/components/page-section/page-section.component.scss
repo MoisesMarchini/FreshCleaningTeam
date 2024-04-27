@@ -12,6 +12,10 @@ section > .layout {
   font-size: 1.75rem;
 }
 
+.section-content {
+  font-size: 1rem;
+}
+
 .layout.reverse-on-mobile {
   display: flex;
   flex-direction: column-reverse;
