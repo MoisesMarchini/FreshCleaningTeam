@@ -20,13 +20,13 @@ export class OurReviewsPage implements AfterViewInit {
       stars: 5,
     },
     {
-      title: 'Martina McTighe',
-      content: `I had my first cleaning with the Fresh cleaning team today and I was so impressed when i got home. They went above and beyond my expectations. The way they organized little things I wouldn't even think to do and the deep cleaning that i don't myself have the time to do was so great. I'm so happy i found them! I already fell like I don't know what i would do without them!!`,
+      title: 'Tanim Yousuf',
+      content: `Great experience using this cleaning service! Very professional, thorough, organized, and on time. Thank you!!`,
       stars: 5,
     },
     {
-      title: 'Tanim Yousuf',
-      content: `Great experience using this cleaning service! Very professional, thorough, organized, and on time. Thank you!!`,
+      title: 'Martina McTighe',
+      content: `I had my first cleaning with the Fresh cleaning team today and I was so impressed when i got home. They went above and beyond my expectations. The way they organized little things I wouldn't even think to do and the deep cleaning that i don't myself have the time to do was so great. I'm so happy i found them! I already fell like I don't know what i would do without them!!`,
       stars: 5,
     },
     {

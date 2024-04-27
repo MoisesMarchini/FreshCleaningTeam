@@ -1,11 +1,6 @@
 import { Component } from '@angular/core';
-import {
-  CardIconOptions,
-  CardImageOptions,
-} from 'src/app/components/cards/card-options';
-import { PageSection } from 'src/app/components/page-section/page-section';
+import { CardIconOptions } from 'src/app/components/cards/card-options';
 import { SectionCardOverImageOptions } from 'src/app/components/section-card-over-image/section-card-over-image.component';
-import { getFilenamesArray } from 'src/app/helpers/functions';
 import { environment } from 'src/environments/environment';
 
 @Component({
