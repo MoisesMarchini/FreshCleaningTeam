@@ -16,21 +16,15 @@ import { environment } from 'src/environments/environment';
 export class HomePage {
   cardOverImageOptions: SectionCardOverImageOptions[] = [
     {
-      markUp: 'Mark-Up',
-      title: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.`,
-      body: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae ullam
-      recusandae nisi eum eaque perspiciatis rerum odio dicta. Exercitationem
-      quia deleniti dolorum maxime obcaecati non ratione. Dolor, voluptatum.
-      Recusandae!`,
+      markUp: '',
+      title: `Keeping your home clean and organized is good for the health of your body and mind!`,
+      body: `A clean and organized place increases our levels of pleasure and relaxation, providing better results in all areas of our lives.`,
       imagePath: '1.jpg',
     },
     {
-      markUp: 'Mark-Up',
-      title: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.`,
-      body: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae ullam
-      recusandae nisi eum eaque perspiciatis rerum odio dicta. Exercitationem
-      quia deleniti dolorum maxime obcaecati non ratione. Dolor, voluptatum.
-      Recusandae!`,
+      markUp: '',
+      title: `You and your family deserve this experience of self-care and well-being!`,
+      body: ``,
       imagePath: '2.jpeg',
     },
   ];
