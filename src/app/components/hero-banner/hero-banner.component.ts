@@ -11,6 +11,8 @@ export class HeroBannerComponent implements OnInit {
 
   videoUrl = '/assets/hero/hero-video.mp4';
   videoCoverUrl = '/assets/hero/hero-cover.png';
+  videoTextString =
+    'Fresh Cleaning Team - Health and well-being in the form of cleaning!';
 
   ngOnInit(): void {}
 }

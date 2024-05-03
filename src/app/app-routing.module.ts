@@ -13,34 +13,42 @@ import { CleaningTypesPage } from './pages/cleaning-types/cleaning-types.compone
 const routes: Routes = [
   {
     path: environment.routes.home,
+    title: `${environment.defaultWebTitle} - Home`,
     component: HomePage,
   },
   {
     path: environment.routes.gallery,
+    title: `${environment.defaultWebTitle} - Gallery`,
     component: GalleryPage,
   },
   {
     path: environment.routes.cleaningTypes,
+    title: `${environment.defaultWebTitle} - Cleaning Types`,
     component: CleaningTypesPage,
   },
   {
     path: environment.routes.reviews,
+    title: `${environment.defaultWebTitle} - Reviews`,
     component: OurReviewsPage,
   },
   {
     path: environment.routes.faq,
+    title: `${environment.defaultWebTitle} - FAQ`,
     component: FaqPage,
   },
   {
     path: environment.routes.aboutUs,
+    title: `${environment.defaultWebTitle} - About Us`,
     component: AboutUsPage,
   },
   {
     path: environment.routes.termsOfUse,
+    title: `${environment.defaultWebTitle} - Terms Of Use`,
     component: TermsOfUsePage,
   },
   {
     path: environment.routes.privacyPolicy,
+    title: `${environment.defaultWebTitle} - Privacy Police`,
     component: PrivacyPolicyPage,
   },
   {

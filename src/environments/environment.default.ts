@@ -1,5 +1,6 @@
 export const environmentDefault = {
   defaultWebTitle: 'Fresh Cleaning Team',
+  keyWordsSeo: 'Karlane, Long Beach - NJ',
 
   routes: {
     home: 'home',

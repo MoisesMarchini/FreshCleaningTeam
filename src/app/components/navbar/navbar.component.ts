@@ -19,7 +19,7 @@ export const navProps = {
   },
 })
 export class NavbarComponent implements AfterViewInit {
-  webTitle = environment.defaultWebTitle;
+  webTitle = `${environment.defaultWebTitle} - ${environment.keyWordsSeo}`;
   homeRoute = environment.routes.home;
   expand = false;
   isSticked = false;

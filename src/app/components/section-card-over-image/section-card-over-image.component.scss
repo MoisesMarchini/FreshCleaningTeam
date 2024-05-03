@@ -13,7 +13,10 @@
     margin: -6rem 0 0 2rem;
     background-color: var(--content-bg-alt);
     z-index: 2;
-    p {
+    .content-title {
+      font-weight: bold;
+    }
+    .content-body {
       display: none;
     }
   }

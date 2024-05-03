@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-section-card-over-image',
@@ -16,6 +17,8 @@ export class SectionCardOverImageComponent {
     imagePath: '1.jpg',
   };
   @Input() directionReverse: boolean = false;
+
+  defaultMarkUp = environment.defaultWebTitle;
 
   imagesRootPath = '/assets/cards/';
 }
