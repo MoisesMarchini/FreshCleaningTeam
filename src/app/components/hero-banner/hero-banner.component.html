@@ -1,9 +1,11 @@
 <div class="hero-wrapper">
   <div class="video-wrapper">
-    <h1 class="visibility-hidden">
-      {{ videoTextString }}
-    </h1>
-    <img class="d-md-none" [src]="videoCoverUrl" alt="" srcset="" />
+    <img
+      class="d-md-none"
+      [src]="videoCoverUrl"
+      [alt]="videoTextString"
+      srcset=""
+    />
     <video
       class="d-none d-md-block"
       #video
@@ -15,6 +17,9 @@
       preload="metadata"
       [poster]="videoCoverUrl"
     >
+      <h1 class="visibility-hidden">
+        {{ videoTextString }}
+      </h1>
       <source [src]="videoUrl" type="video/mp4" />
     </video>
   </div>

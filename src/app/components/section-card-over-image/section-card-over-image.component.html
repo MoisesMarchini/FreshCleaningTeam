@@ -1,13 +1,24 @@
 <div class="wrapper" [class.reverse]="directionReverse">
   <div class="left">
-    <div class="left-content">
+    <div class="left-content d-grid">
       <h2 class="mark-up p" [class.visibility-hidden]="!options.markUp">
         {{ !options.markUp ? defaultMarkUp : options.markUp }}
       </h2>
       <h5 class="content-title h2">
         {{ options.title }}
       </h5>
-      <p class="content-body" [innerHTML]="options.body"></p>
+      <p
+        class="content-body"
+        *ngIf="!!options.body"
+        [innerHTML]="options.body"
+      ></p>
+      <app-default-button
+        *ngIf="options.linkOptions"
+        class="me-auto mt-2"
+        [label]="options.linkOptions.label"
+        [routerLink]="options.linkOptions.routerLink"
+        [href]="options.linkOptions.href"
+      ></app-default-button>
     </div>
   </div>
   <div class="right">

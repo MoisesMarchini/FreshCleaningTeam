@@ -2,6 +2,17 @@ export const environmentDefault = {
   defaultWebTitle: 'Fresh Cleaning Team',
   keyWordsSeo: 'Karlane, Long Beach - NJ',
 
+  aboutUsSection: {
+    content: [
+      `We are a reliable and experienced company providing domestic and commercial
+      cleaning services. We are located in Long Branch, NJ and proudly serve
+      nearly every city in New Jersey. We know that your home is a place of
+      intimacy and security, not only for you, but for everyone who shares this
+      unique space. Our team is made up of trained and qualified professionals for
+      each type of cleaning. Always focused on details, seeking to meet your needs
+      in the best way possible.`,
+    ],
+  },
   routes: {
     home: 'home',
 

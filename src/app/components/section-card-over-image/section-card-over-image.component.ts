@@ -28,4 +28,9 @@ export interface SectionCardOverImageOptions {
   title: string;
   body?: string;
   imagePath: string;
+  linkOptions?: {
+    label: string;
+    routerLink?: string;
+    href?: string;
+  };
 }

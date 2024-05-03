@@ -9,18 +9,46 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./home.component.scss'],
 })
 export class HomePage {
+  smsLink = environment.smsLink();
   cardOverImageOptions: SectionCardOverImageOptions[] = [
+    {
+      markUp: 'Fresh Cleaning Team',
+      title: `About Us`,
+      body: `We are a reliable and experienced company providing domestic and commercial
+      cleaning services. We are located in Long Branch, NJ and proudly serve
+      nearly every city in New Jersey. We know that your home is a place of
+      intimacy and security, not only for you, but for everyone who shares this
+      unique space. Our team is made up of trained and qualified professionals for
+      each type of cleaning. Always focused on details, seeking to meet your needs
+      in the best way possible.`
+        .slice(0, 200)
+        .trim()
+        .concat('...'),
+      imagePath: '1.jpg',
+      linkOptions: {
+        label: 'Read More',
+        routerLink: '/about-us',
+      },
+    },
     {
       markUp: '',
       title: `Keeping your home clean and organized is good for the health of your body and mind!`,
-      body: `A clean and organized place increases our levels of pleasure and relaxation, providing better results in all areas of our lives.`,
-      imagePath: '1.jpg',
+      body: ``,
+      imagePath: '3.jpeg',
+      linkOptions: {
+        label: 'Request a Free Estimate',
+        routerLink: this.smsLink,
+      },
     },
     {
       markUp: '',
       title: `You and your family deserve this experience of self-care and well-being!`,
       body: ``,
-      imagePath: '2.jpeg',
+      imagePath: '4.jpeg',
+      linkOptions: {
+        label: 'Request a Free Estimate',
+        routerLink: this.smsLink,
+      },
     },
   ];
   cardIcons: CardIconOptions[] = [

@@ -11,13 +11,13 @@
   > .left {
     padding: 1.5rem;
     margin: -6rem 0 0 2rem;
-    background-color: var(--content-bg-alt);
+    background: linear-gradient(220.55deg, #fff6eb 0%, #dfd1c5 100%);
     z-index: 2;
     .content-title {
       font-weight: bold;
     }
     .content-body {
-      display: none;
+      font-size: 1rem;
     }
   }
   > .right {
